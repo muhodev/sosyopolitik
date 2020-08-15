@@ -1,0 +1,7 @@
+export { default as Biotech } from './Biotech'
+export { default as Book } from './Book'
+export { default as Brush } from './Brush'
+export { default as Fire } from './Fire'
+export { default as HistoryEdu } from './HistoryEdu'
+export { default as Science } from './Science'
+export { default as UnfoldMore } from './UnfoldMore'

@@ -4,26 +4,27 @@ function Post(props) {
     return (
         <article className="post">
             <div className="post__container">
-
                 <header className="post__header">
-                    <h3 className="post__title">
-
-                    </h3>
+                    <h2 className="post__title">
+                        {props.title}
+                    </h2>
+                    <p className="post__description">
+                        {props.description}
+                    </p>
                     <div className="post__meta">
-                        <div className="post__author"></div>
-                        <div className="post__date"></div>
+                        {/* <div className="post__author">
+                            {props.author.name}
+                        </div> */}
+                        <div className="post__date">
+                            {props.date}
+                        </div>
                     </div>
                 </header>
-
-                <div className="post__description">
-
-                </div>
-
-                <div className="post__cover">
-                    <figure>
-                        <img src="" alt="" />
-                    </figure>
-                </div>
+                <footer>
+                    <div className="post__cover">
+                        <img src={props.cover} alt="" />
+                    </div>
+                </footer>
 
             </div>
         </article>
