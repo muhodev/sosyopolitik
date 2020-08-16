@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function AuthBanner(props) {
     return (
-        <Banner color="yellow">
+        <Banner>
             <div className="banner__title">
                 Oku, üret, paylaş
             </div>

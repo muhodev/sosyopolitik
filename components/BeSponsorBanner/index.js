@@ -4,7 +4,7 @@ import { Banner } from '../'
 
 function BeSponsorBanner(props) {
     return (
-        <Banner color="blue">
+        <Banner>
             <div className="banner__title">
                 Sponsorluk
             </div>

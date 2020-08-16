@@ -16,7 +16,7 @@ function Home(props) {
                             <div className="posts__header--text">Taze Çıkanlar</div>
                             <div className="posts__header--action">
                                 <Link href="">
-                                    <a className="btn">
+                                    <a className="btn btn--default">
                                         Tümünü görüntüle
                                 </a>
                                 </Link>
