@@ -1,11 +1,17 @@
 .btn {
     display: inline-flex;
     justify-content: center;
-    padding: 5px 12px;
+    padding: 7px 13px;
     border-radius: 4px;
     background-color: transparent;
     font-size: 14px;
     font-weight: 500;
+    color: $c-dark;
+
+    &--default {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     &--primary {
         background-color: $c-primary;
@@ -13,13 +19,17 @@
     }
 
     &--dark {
-        background-color: #222;
+        background-color: $c-dark-light;
         color: $c-text-white;
     }
 
     &--white {
         background-color: $c-white;
         color: $c-text-primary;
+    }
+
+    &--outline {
+        border: 1px solid $c-dark;
     }
 
     &-group {

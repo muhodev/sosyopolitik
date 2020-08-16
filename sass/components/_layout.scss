@@ -6,10 +6,15 @@
 
     &__container {
         max-width: 1264px;
+        width: 100%;
         display: grid;
         grid-template-columns: 160px 1fr 300px;
         grid-gap: 55px;
         padding: 0 25px;
+
+        main {
+            padding: 20px 0; 
+        }
     }
 
    

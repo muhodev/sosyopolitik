@@ -7,4 +7,3 @@ export { default as AuthBanner } from "./AuthBanner";
 export { default as BeSponsorBanner } from "./BeSponsorBanner";
 
 
-

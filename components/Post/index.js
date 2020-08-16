@@ -8,9 +8,9 @@ function Post(props) {
                 <a className="post__link">
                     <div className="post__container">
                         <header className="post__header">
-                            <h2 className="post__title">
+                            <h3 className="post__title">
                                 {props.title}
-                            </h2>
+                            </h3>
                             <p className="post__description">
                                 {props.description}
                             </p>

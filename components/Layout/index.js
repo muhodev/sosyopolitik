@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Head from "next/head"
-import { Header, AuthBanner, BeSponsorBanner } from '..'
+import { Header } from '..'
 
 function Layout(props) {
     return (
@@ -11,17 +11,10 @@ function Layout(props) {
             <div className="layout">
                 <div className="layout__container">
                     <Header />
-                    <main>
-                        {
-                            props.children
-                        }
-                    </main>
-                    <aside className="sidebar">
-                        <div className="sidebar__container">
-                            <AuthBanner />
-                            <BeSponsorBanner />
-                        </div>
-                    </aside>
+                    {
+                        props.children
+                    }
+
                 </div>
             </div>
         </Fragment>

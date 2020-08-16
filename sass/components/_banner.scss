@@ -9,41 +9,31 @@
     }
 
     &__title {
-        font-weight: 500;
         font-size: 17px;
-        
+        font-weight: 700;
+        font-family: 'PT Serif', serif;
     }
 
     &__description {
-        margin-top: 8px;
+        margin-top: 10px;
         line-height: 1.5;
         // color: $c-text-secondary;
         font-size: 14px;
     }
 
     &__footer {
-        margin-top: 20px;
+        margin-top: 16px;
     }
     &--red {
         background-color: $c-red;
     }
-    &--red, &--blue {
-        .banner {
-            &__title {
-                color: $c-text-white;
-            }
-
-            &__description {
-                color: $c-text-white-light;
-            }
-        }
-    }
 
     &--blue {
-        background-color: $c-primary;
+        background-color: $c-primary-light;
     }
 
     &--yellow {
-        background-color: $c-yellow;
+        background-color: $c-yellow-light;
     }
+
 }

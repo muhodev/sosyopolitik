@@ -4,7 +4,7 @@ import { Banner } from '../'
 
 function BeSponsorBanner(props) {
     return (
-        <Banner>
+        <Banner color="blue">
             <div className="banner__title">
                 Sponsorluk
             </div>
@@ -14,7 +14,7 @@ function BeSponsorBanner(props) {
             <footer className="banner__footer">
                 <div className="btn-group">
                     <Link href="/">
-                        <a className="btn btn--dark">Sponsor ol</a>
+                        <a className="btn btn--default">Sponsor ol</a>
                     </Link>
                 </div>
             </footer>

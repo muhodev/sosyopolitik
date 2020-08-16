@@ -1,3 +1,5 @@
 node_modules
 .next
 # api
+
+/yarn-error.log

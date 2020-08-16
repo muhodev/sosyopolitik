@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function AuthBanner(props) {
     return (
-        <Banner>
+        <Banner color="yellow">
             <div className="banner__title">
                 Oku, üret, paylaş
             </div>
@@ -15,7 +15,7 @@ function AuthBanner(props) {
             <footer className="banner__footer">
                 <div className="btn-group">
                     <Link href="/">
-                        <a className="btn btn--dark">Kayıt ol</a>
+                        <a className="btn btn--default">Kayıt ol</a>
                     </Link>
                     <Link href="/">
                         <a className="btn">Giriş yap</a>

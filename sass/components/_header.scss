@@ -21,6 +21,8 @@
         display: flex;
         align-items: center;
         border-radius: 4px;
+        cursor: pointer;
+        
 
         &--icon {
             margin-right: 4px;
@@ -38,11 +40,11 @@
         }
 
         &--active {
-            color: white;
-            background-color: #222;
+            // color: white;
+            background-color: $c-primary-light;
 
             svg {
-                color: white !important;
+                // color: white !important;
             }
         }
     }
