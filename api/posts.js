@@ -5,7 +5,8 @@ export default [
         cover: "https://techcrunch.com/wp-content/uploads/2020/08/toronto-map.jpg",
         author: {
             name: "sosyopolitik"
-        }
+        },
+        slug: ""
     },
     {
         title: "What Matters More, Quality or Quantity?",
@@ -13,7 +14,9 @@ export default [
         cover: "https://assets-global.website-files.com/5d816b07d269382588dbcab1/5e2a2a7f1789407ab05518f4_blogpost-perfection.jpg",
         author: {
             name: ""
-        }
+        },
+        slug: ""
+
     },
     {
         title: "Impossible Foods gobbles up another $200 million",
@@ -21,7 +24,9 @@ export default [
         cover: "https://techcrunch.com/wp-content/uploads/2018/04/impossible-white-castle.png?w=430&h=230&crop=1",
         author: {
             name: ""
-        }
+        },
+        slug: ""
+
     },
     {
         title: "kesinlikle bir şeyler oldu",
@@ -29,7 +34,9 @@ export default [
         cover: "https://cdn-images-1.medium.com/max/600/1*-yQIr0bXXaexgpzv_gE4jQ.png",
         author: {
             name: ""
-        }
+        },
+        slug: ""
+
     },
 
     {
@@ -38,7 +45,9 @@ export default [
         cover: "https://techcrunch.com/wp-content/uploads/2020/08/toronto-map.jpg",
         author: {
             name: "sosyopolitik"
-        }
+        },
+        slug: ""
+
     },
     {
         title: "What Matters More, Quality or Quantity?",
@@ -46,7 +55,9 @@ export default [
         cover: "https://assets-global.website-files.com/5d816b07d269382588dbcab1/5e2a2a7f1789407ab05518f4_blogpost-perfection.jpg",
         author: {
             name: ""
-        }
+        },
+        slug: ""
+
     },
     {
         title: "Impossible Foods gobbles up another $200 million",
@@ -54,7 +65,9 @@ export default [
         cover: "https://techcrunch.com/wp-content/uploads/2018/04/impossible-white-castle.png?w=430&h=230&crop=1",
         author: {
             name: ""
-        }
+        },
+        slug: ""
+
     },
     {
         title: "kesinlikle bir şeyler oldu",
@@ -62,6 +75,7 @@ export default [
         cover: "https://cdn-images-1.medium.com/max/600/1*-yQIr0bXXaexgpzv_gE4jQ.png",
         author: {
             name: ""
-        }
+        },
+        slug: ""
     }
 ]

@@ -1,0 +1,33 @@
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    padding: 5px 12px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 500;
+
+    &--primary {
+        background-color: $c-primary;
+        color: $c-text-white;
+    }
+
+    &--dark {
+        background-color: #222;
+        color: $c-text-white;
+    }
+
+    &--white {
+        background-color: $c-white;
+        color: $c-text-primary;
+    }
+
+    &-group {
+        display: flex;
+        align-items: center;
+
+        .btn:first-child {
+            margin-right: 10px;
+        } 
+    }
+}

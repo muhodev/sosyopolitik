@@ -1,1 +1,22 @@
 $f-family-roboto:'Roboto', sans-serif;
+
+$c-dark:#0d0e0e;
+$c-white: #fff;
+$c-white-light: #eaeaea;
+$c-primary:#2188ff;
+$c-primary-dark: #0077c2;
+$c-primary-light: #80d6ff;
+$c-red:#e54b42;
+$c-yellow: #f7e05f;
+
+$c-text-white: $c-white;
+$c-text-white-light: $c-white-light;
+$c-text-primary: $c-dark;
+$c-text-secondary: #0d0e0ebe;
+
+$c-border: #00000020;
+
+
+$border: 1px solid $c-border;
+
+$shadow: 0 10px 30px -5px rgba(0,0,0,.2);

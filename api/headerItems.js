@@ -1,7 +1,12 @@
 import React from 'react'
-import { Fire, Biotech, Brush, Book, HistoryEdu, Science, UnfoldMore } from "../components/Icons"
+import { Fire, Biotech, Brush, Book, HistoryEdu, Science, UnfoldMore, Home } from "../components/Icons"
 
 export default [
+    {
+        title: "Ana Sayfa",
+        slug: "",
+        icon: <Home />
+    },
     {
         title: "Popüler",
         slug: "",
