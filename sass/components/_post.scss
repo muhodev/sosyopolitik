@@ -1,6 +1,12 @@
 .posts {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-gap: 76px;
+    margin: 55px auto;
+    width: 90%;
     &__container {
         display: grid;
+        grid-gap: 55px;
     }
 
     &__header {
@@ -9,9 +15,9 @@
         justify-content: space-between;
 
         &--text {
-            font-size: 17px;
-            font-weight: 700;
-            font-family: 'PT Serif', serif;
+            font-size:18px;
+            font-weight: 800;
+            font-family: $f-family-secondary;
         }
     }
 
@@ -20,9 +26,6 @@
 
 .post {
     width: 100%;
-    padding-top: 38px;
-    padding-bottom: 38px;
-    // border-bottom: $border;
     cursor: pointer;
 
     &__link {
@@ -33,14 +36,15 @@
 
     &__container {
         display: grid;
-        grid-template-columns: 1.6fr 1fr;
-        grid-column-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 35px;
     }
 
     &__title {
-        font-size: 20px;
-        font-weight: 700;
-        font-family: 'PT Serif', serif;
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 28px;
+        font-family: $f-family-secondary;
     }    
 
     &__description {

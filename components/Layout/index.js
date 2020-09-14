@@ -9,8 +9,8 @@ function Layout(props) {
                 <title>Sosyopolitik</title>
             </Head>
             <div className="layout">
+                <Header />
                 <div className="layout__container">
-                    <Header />
                     {
                         props.children
                     }

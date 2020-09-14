@@ -1,12 +1,5 @@
 .logo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 0 12px;
-    svg {
-        width: 100%;
-        height: auto;
-    }
+    font-family: $f-family-secondary;
+    font-weight: 800;
+    font-size: 23px;
 }

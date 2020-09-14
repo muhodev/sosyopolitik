@@ -5,28 +5,28 @@ import { headerItems } from '../../api'
 function Header(props) {
     return (
         <header className="header">
-            <div className="header__container">
-
-                <div>
-                    <Logo />
+            <div className="layout__container header__container">
+                <div className="logo">
+                    Sosyopolitik
                 </div>
-                <nav>
-
-                    <div className="header__items">
-                        {
-                            headerItems.map((item, index) => (
-                                <div className={`header__item ${index === 0 && "header__item--active"}`} key={index}>
-                                    <div className="header__item--icon">
-                                        {item.icon}
-                                    </div>
-                                    <div className="header__item--text">
-                                        {item.title}
-                                    </div>
-                                </div>
-                            ))
-                        }
+                <div className="header__items">
+                    <div className="header__item">
+                        Dünya
                     </div>
-                </nav>
+                    <div className="header__item">
+                        Kültür
+                    </div>
+                    <div className="header__item">
+                        Girişim
+                    </div>
+                    <div className="header__item">
+                        Tarih
+                    </div>
+                    <div className="header__item">
+                        Manifesto
+                    </div>
+                </div>
+
             </div>
         </header>
     )

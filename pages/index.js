@@ -14,13 +14,6 @@ function Home(props) {
                     <div className="posts__container">
                         <header className="posts__header">
                             <div className="posts__header--text">Taze Çıkanlar</div>
-                            <div className="posts__header--action">
-                                <Link href="">
-                                    <a className="btn btn--default">
-                                        Tümünü görüntüle
-                                </a>
-                                </Link>
-                            </div>
                         </header>
                         {
                             getPosts.map((post, index) => (
@@ -34,14 +27,14 @@ function Home(props) {
                             ))
                         }
                     </div>
+                    <aside className="sidebar">
+                        <div className="sidebar__container">
+                            <AuthBanner />
+                            <BeSponsorBanner />
+                        </div>
+                    </aside>
                 </section>
             </main>
-            <aside className="sidebar">
-                <div className="sidebar__container">
-                    <AuthBanner />
-                    <BeSponsorBanner />
-                </div>
-            </aside>
         </Layout>
     )
 }

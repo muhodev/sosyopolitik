@@ -1,7 +1,9 @@
 .banner {
-    background-color: #f0f0f0;
+    // background-color: #f0f0f0;
+    background-color: #F0FAF1;
     border-radius: 8px;
     margin-bottom: 40px;
+    border: 1px solid #d5ecd8;
 
 
     &__container {
@@ -9,9 +11,9 @@
     }
 
     &__title {
-        font-size: 17px;
-        font-weight: 700;
-        font-family: 'PT Serif', serif;
+        font-size: 18px;
+        font-weight: 800;
+        font-family: $f-family-secondary;
     }
 
     &__description {

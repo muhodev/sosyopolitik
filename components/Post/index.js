@@ -7,13 +7,13 @@ function Post(props) {
             <Link href={`/${props.slug || ""}`}>
                 <a className="post__link">
                     <div className="post__container">
-                        <header className="post__header">
+                        <header className="post__cover">
+                            <img src={props.cover} alt="" />
+                        </header>
+                        <main className="post__header">
                             <h3 className="post__title">
                                 {props.title}
                             </h3>
-                            <p className="post__description">
-                                {props.description}
-                            </p>
                             <div className="post__meta">
                                 {/* <div className="post__author">
                                     {props.author.name}
@@ -22,12 +22,7 @@ function Post(props) {
                                     {props.date}
                                 </div>
                             </div>
-                        </header>
-                        <footer>
-                            <div className="post__cover">
-                                <img src={props.cover} alt="" />
-                            </div>
-                        </footer>
+                        </main>
 
                     </div>
                 </a>
