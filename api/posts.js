@@ -6,7 +6,8 @@ export default [
         author: {
             name: "sosyopolitik"
         },
-        slug: ""
+        slug: "",
+        date: "3 dakika önce"
     },
     {
         title: "What Matters More, Quality or Quantity?",
@@ -15,7 +16,8 @@ export default [
         author: {
             name: ""
         },
-        slug: ""
+        slug: "",
+        date: "12 saat önce"
 
     },
     {
@@ -25,7 +27,8 @@ export default [
         author: {
             name: ""
         },
-        slug: ""
+        slug: "",
+        date: "3 gün önce"
 
     },
     {
@@ -35,7 +38,8 @@ export default [
         author: {
             name: ""
         },
-        slug: ""
+        slug: "",
+        date: "1 ay önce"
 
     },
 
@@ -46,7 +50,8 @@ export default [
         author: {
             name: "sosyopolitik"
         },
-        slug: ""
+        slug: "",
+        date: "1 ay önce"
 
     },
     {
@@ -56,7 +61,8 @@ export default [
         author: {
             name: ""
         },
-        slug: ""
+        slug: "",
+        date: "1 ay önce",
 
     },
     {
@@ -66,8 +72,8 @@ export default [
         author: {
             name: ""
         },
-        slug: ""
-
+        slug: "",
+        date: "2 ay önce"
     },
     {
         title: "kesinlikle bir şeyler oldu",
@@ -76,6 +82,7 @@ export default [
         author: {
             name: ""
         },
-        slug: ""
+        slug: "",
+        date: "3 ay önce"
     }
 ]

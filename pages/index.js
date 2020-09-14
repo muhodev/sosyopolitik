@@ -23,6 +23,7 @@ function Home(props) {
                                     description={post.description}
                                     author={post.author}
                                     cover={post.cover}
+                                    date={post.date}
                                 />
                             ))
                         }
