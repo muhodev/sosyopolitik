@@ -1,45 +1,33 @@
 import React from 'react'
-import { Fire, Biotech, Brush, Book, HistoryEdu, Science, UnfoldMore, Home } from "../components/Icons"
+import { Logo } from "../components"
 
 export default [
-    {
-        title: "Ana Sayfa",
-        slug: "",
-        icon: <Home />
-    },
-    {
-        title: "Popüler",
-        slug: "",
-        icon: <Fire />
-    },
-    {
-        title: "Sanat",
-        slug: "",
-        icon: <Brush />
-    },
-    {
-        title: "Bilim",
-        slug: "",
-        icon: <Science />
-    },
-    {
-        title: "Teknoloji",
-        slug: "",
-        icon: <Biotech />
-    },
-    {
-        title: "Kitap",
-        slug: "",
-        icon: <Book />
-    },
-    {
-        title: "Tarih",
-        slug: "",
-        icon: <HistoryEdu />
-    },
-    {
-        title: "Daha Fazla",
-        slug: "",
-        icon: <UnfoldMore />
-    }
+    [
+        {
+            title: <Logo />,
+            slug: ""
+        }
+    ],
+    [
+        {
+            title: "Sanat",
+            slug: "kategori/sanat",
+        },
+        {
+            title: "Bilim",
+            slug: "kategori/bilim",
+        },
+        {
+            title: "Düşünce",
+            slug: "kategori/düsünce",
+        },
+        {
+            title: "Tarih",
+            slug: "kategori/tarih",
+        },
+        {
+            title: "Daha Fazla",
+            slug: "kategoriler",
+        }
+    ]
 ]

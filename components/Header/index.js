@@ -1,34 +1,49 @@
 import React from 'react'
+import Link from 'next/link'
 import { Logo } from '..'
 import { headerItems } from '../../api'
+import { Container } from '../'
 
 function Header(props) {
     return (
         <header className="header">
-            <div className="layout__container header__container">
-                <div className="logo">
-                    Sosyopolitik
-                </div>
-                <div className="header__items">
-                    <div className="header__item">
-                        Dünya
-                    </div>
-                    <div className="header__item">
-                        Kültür
-                    </div>
-                    <div className="header__item">
-                        Girişim
-                    </div>
-                    <div className="header__item">
-                        Tarih
-                    </div>
-                    <div className="header__item">
-                        Manifesto
-                    </div>
-                </div>
-
-            </div>
+            <Container flex spaceBetween>
+                {
+                    headerItems.map((items, index) => (
+                        <HeaderItems items={items} key={index} />
+                    ))
+                }
+            </Container>
         </header>
+    )
+}
+
+function HeaderItems({ items }) {
+    return (
+        <div className="header__items">
+            {
+                items.map((item, index) => (
+                    <HeaderItem title={item.title} slug={item.slug} key={index} />
+                ))
+            }
+        </div>
+    )
+}
+
+function HeaderItem(props) {
+    { console.log(props) }
+    return (
+        <div className="header__item">
+            {
+                (
+                    <Link href={"/" + props.slug}>
+                        <a>
+                            {props.title}
+                        </a>
+                    </Link>
+                )
+            }
+        </div>
     )
 }
 

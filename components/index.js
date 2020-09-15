@@ -5,5 +5,7 @@ export { default as Header } from "./Header";
 export { default as Banner } from "./Banner";
 export { default as AuthBanner } from "./AuthBanner";
 export { default as BeSponsorBanner } from "./BeSponsorBanner";
+export { default as Container } from "./Container";
+
 
 
