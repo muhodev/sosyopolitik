@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { Logo } from '..'
 import { headerItems } from '../../api'
 import { Container } from '../'
 
@@ -31,17 +30,16 @@ function HeaderItems({ items }) {
 }
 
 function HeaderItem(props) {
-    { console.log(props) }
     return (
         <div className="header__item">
             {
-                (
+                props.slug ? (
                     <Link href={"/" + props.slug}>
                         <a>
                             {props.title}
                         </a>
                     </Link>
-                )
+                ) : props.title
             }
         </div>
     )

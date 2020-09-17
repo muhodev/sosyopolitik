@@ -1,5 +1,7 @@
 import React from 'react'
 import { Logo } from "../components"
+import HamburgerMenu from "../components/HamburgerMenu"
+
 
 export default [
     [
@@ -26,8 +28,7 @@ export default [
             slug: "kategori/tarih",
         },
         {
-            title: "Daha Fazla",
-            slug: "kategoriler",
+            title: <HamburgerMenu />
         }
     ]
 ]

@@ -12,18 +12,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
     }
 
     .logo {
         color: #fff;
-    }
-
-    svg {
-        color: #dadada;
-    }
-
-    nav {
     }
 
     &__items {
@@ -51,14 +43,6 @@
 
         &--text {
             font-weight: 500;
-        }
-    }
-}
-
-svg {
-    path {
-        &:nth-child(2) {
-            fill: currentColor;
         }
     }
 }

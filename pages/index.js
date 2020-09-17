@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Layout, Post, AuthBanner, BeSponsorBanner } from "../components"
 import { posts } from "../api"
-import Link from "next/link"
 
 
 function Home(props) {
