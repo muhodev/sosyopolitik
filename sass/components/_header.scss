@@ -32,8 +32,8 @@
 
         &--icon {
             margin-right: 6px;
-            color:$c-text-secondary;
-            
+            color: $c-text-secondary;
+
             svg {
                 display: flex;
                 align-items: center;
@@ -43,6 +43,22 @@
 
         &--text {
             font-weight: 500;
+        }
+    }
+}
+
+.s-header {
+    &__big {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1b1c1e;
+        display: none;
+
+        &.open {
+            display: block;
         }
     }
 }

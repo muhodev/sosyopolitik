@@ -1,31 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { headerItems } from '../../api'
-import { Container } from '../'
+import { Container, Logo, HamburgerMenu } from '../'
 
 function Header(props) {
+    const [isOpenHeader, setOpenHeader] = useState(false)
     return (
         <header className="header">
             <Container flex spaceBetween>
-                {
-                    headerItems.map((items, index) => (
-                        <HeaderItems items={items} key={index} />
-                    ))
-                }
-            </Container>
-        </header>
-    )
-}
+                <div className="header__items">
+                    <HeaderItem title={<Logo />} slug="/" />
+                </div>
 
-function HeaderItems({ items }) {
-    return (
-        <div className="header__items">
-            {
-                items.map((item, index) => (
-                    <HeaderItem title={item.title} slug={item.slug} key={index} />
-                ))
-            }
-        </div>
+                <div className="header__items">
+                    {
+                        headerItems.map((item, index) => (
+                            <HeaderItem title={item.title} slug={item.slug} key={index} />
+                        ))
+                    }
+                    <div className="header__item">
+                        <HamburgerMenu isOpen={isOpenHeader} toggleHeader={() => setOpenHeader(!isOpenHeader)} />
+                    </div>
+                </div>
+            </Container>
+            <div className={`s-header__big ${isOpenHeader && "open"}`}>
+
+            </div>
+        </header>
     )
 }
 
@@ -34,7 +35,7 @@ function HeaderItem(props) {
         <div className="header__item">
             {
                 props.slug ? (
-                    <Link href={"/" + props.slug}>
+                    <Link href={props.slug}>
                         <a>
                             {props.title}
                         </a>
