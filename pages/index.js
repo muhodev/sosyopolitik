@@ -14,23 +14,26 @@ function Home(props) {
                         <header className="posts__header">
                             <div className="posts__header--text">Taze Çıkanlar</div>
                         </header>
-                        {
-                            getPosts.map((post, index) => (
-                                <Post
-                                    key={index}
-                                    title={post.title}
-                                    description={post.description}
-                                    author={post.author}
-                                    cover={post.cover}
-                                    date={post.date}
-                                />
-                            ))
-                        }
+                        <div className="posts__grid">
+                            {
+                                getPosts.map((post, index) => (
+                                    <Post
+                                        key={index}
+                                        title={post.title}
+                                        description={post.description}
+                                        author={post.author}
+                                        cover={post.cover}
+                                        date={post.date}
+                                    />
+                                ))
+                            }
+                        </div>
                     </div>
                     <aside className="sidebar">
                         <div className="sidebar__container">
                             <AuthBanner />
                             <BeSponsorBanner />
+
                         </div>
                     </aside>
                 </section>

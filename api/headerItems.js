@@ -3,20 +3,11 @@ import React from 'react'
 
 export default [
     {
-        title: "Sanat",
+        title: "Nasıl yazarım?",
         slug: "/new",
     },
     {
-        title: "Bilim",
+        title: "Hakkımızda",
         slug: "/kategori/bilim",
     },
-    {
-        title: "Düşünce",
-        slug: "/kategori/düsünce",
-    },
-    {
-        title: "Tarih",
-        slug: "/kategori/tarih",
-    }
-
 ]

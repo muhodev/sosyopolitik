@@ -19,6 +19,9 @@ function Header(props) {
                         ))
                     }
                     <div className="header__item">
+                        Giriş yap
+                    </div>
+                    <div className="header__item">
                         <HamburgerMenu isOpen={isOpenHeader} toggleHeader={() => setOpenHeader(!isOpenHeader)} />
                     </div>
                 </div>

@@ -1,16 +1,16 @@
-$f-family-roboto:'Roboto', sans-serif;
-$f-family-secondary: 'Raleway', sans-serif;
+$f-family-default: "Roboto", sans-serif;
+$f-family-secondary: "Raleway", sans-serif;
 
-$c-dark:#0d0e0e;
-$c-dark-light:#2f363d;
+$c-dark: #0d0e0e;
+$c-dark-light: #2f363d;
 $c-white: #fff;
 $c-white-light: #eaeaea;
-$c-primary:#2188ff;
+$c-primary: #2188ff;
 $c-primary-dark: #0077c2;
 // $c-primary-light: #c5dbf2;
 $c-primary-light: #e4edf7;
 
-$c-red:#e54b42;
+$c-red: #e54b42;
 $c-yellow: #f7e05f;
 $c-yellow-light: #fdf3d8;
 
@@ -21,7 +21,6 @@ $c-text-secondary: #0d0e0ebe;
 
 $c-border: #00000020;
 
-
 $border: 1px solid $c-border;
 
-$shadow: 0 10px 30px -5px rgba(0,0,0,.2);
+$shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
