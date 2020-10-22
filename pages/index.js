@@ -24,6 +24,7 @@ function Home(props) {
                                         author={post.author}
                                         cover={post.cover}
                                         date={post.date}
+                                        slug={post.slug}
                                     />
                                 ))
                             }

@@ -1,8 +1,8 @@
 import { createContext } from 'react'
 
 const LayoutContext = createContext({
-    isHeaderOpen: false,
-    toggleHeader: () => { }
+    isAuthModalOpen: false,
+    toggleAuthModal: () => { }
 })
 
 export default LayoutContext

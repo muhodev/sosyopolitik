@@ -8,6 +8,10 @@ export { default as AuthBanner } from "./AuthBanner";
 export { default as BeSponsorBanner } from "./BeSponsorBanner";
 export { default as Container } from "./Container";
 export { default as HomeTopPosts } from "./HomeTopPosts";
+export { default as Modal } from "./Modal";
+export { default as AuthModal } from "./AuthModal";
+
+
 
 
 

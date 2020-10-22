@@ -1,26 +1,31 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import Head from "next/head"
-import { Header } from '..'
+import { AuthModal, Header } from '..'
 import LayoutContext from "../../store"
 
 function Layout(props) {
+    const [isAuthModalOpen, setAuthModalOpen] = useState(false)
     return (
-        <Fragment>
+        <LayoutContext.Provider value={{
+            isAuthModalOpen, toggleAuthModal: (isOpen) => {
+                setAuthModalOpen(isOpen)
+            }
+        }}>
+
             <Head>
                 <title>Sosyopolitik</title>
             </Head>
-            <LayoutContext.Provider value={{ isHeaderOpen: false }}>
-                <div className="layout">
-                    <Header />
-                    <div className="layout__container">
-                        {
-                            props.children
-                        }
+            <div className="layout">
+                <Header />
+                <div className="layout__container">
+                    {
+                        props.children
+                    }
 
-                    </div>
                 </div>
-            </LayoutContext.Provider>
-        </Fragment>
+                <AuthModal />
+            </div>
+        </LayoutContext.Provider>
     )
 }
 

@@ -4,10 +4,10 @@ import React from 'react'
 export default [
     {
         title: "Nasıl yazarım?",
-        slug: "/new",
+        slug: "/nasil-yazarim",
     },
     {
         title: "Hakkımızda",
-        slug: "/kategori/bilim",
+        slug: "/hakkimizda",
     },
 ]

@@ -2,7 +2,7 @@
   "name": "sosyopolitik-frontend",
   "version": "0.0.1",
   "main": "index.js",
-  "author": "weburus",
+  "author": "muhodev",
   "license": "ISC",
   "private": true,
   "scripts": {

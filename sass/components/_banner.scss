@@ -4,9 +4,8 @@
     border-radius: 8px;
     margin-bottom: 40px;
     // border: 1px solid #d5ecd8;
-    background-color: #f3f4f5;
+    // background-color: #f3f4f5;
     border: 1px solid #dee3e8;
-
 
     &__container {
         padding: 16px;
@@ -39,5 +38,4 @@
     &--yellow {
         background-color: $c-yellow-light;
     }
-
 }

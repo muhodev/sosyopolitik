@@ -1,0 +1,23 @@
+.input {
+    &__control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        label {
+            margin-bottom: 4px;
+        }
+
+        input {
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #3e4a55;
+            padding: 9px 13px;
+            font-size: 16px;
+
+            &::placeholder {
+                color: #757575;
+            }
+        }
+    }
+}
