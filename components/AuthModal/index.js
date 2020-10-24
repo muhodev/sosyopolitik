@@ -1,27 +1,51 @@
-import React, { useContext } from 'react'
-import { Modal } from '../'
+import React, { useContext, useState } from 'react'
+import { Modal, Input } from '../'
 
 import AuthContext from "../../store/"
+import { PrimaryButton } from '../'
 
 function AuthModal(props) {
     const contextData = useContext(AuthContext)
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+
+    const closeModal = () => {
+        setUsername("")
+        setPassword("")
+        contextData.toggleAuthModal(false)
+    }
+
     return (
-        <Modal title="Oturum Açın" isOpen={contextData.isAuthModalOpen} closeModal={() => contextData.toggleAuthModal(false)}>
+        <Modal
+            title="Oturum Açın"
+            isOpen={contextData.isAuthModalOpen}
+            closeModal={closeModal.bind(this)}
+        >
             <form>
                 <div className="input__control">
                     <label>
                         Kullanıcı adı
                     </label>
-                    <input placeholder="Geçerli kullanıcı adınızı girin" />
+                    <Input
+                        placeholder="Geçerli kullanıcı adınızı girin"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        type="text"
+                    />
                 </div>
                 <div className="input__control">
                     <label>
                         Şifre
                     </label>
-                    <input placeholder="Şifreinizi girin" />
+                    <Input
+                        placeholder="Şifreinizi girin"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        type="password"
+                    />
                 </div>
                 <div>
-                    <div className="btn btn--primary">Giriş yap</div>
+                    <PrimaryButton>Giriş yap</PrimaryButton>
                 </div>
             </form>
         </Modal>

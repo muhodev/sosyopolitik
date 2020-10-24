@@ -10,7 +10,13 @@ export { default as Container } from "./Container";
 export { default as HomeTopPosts } from "./HomeTopPosts";
 export { default as Modal } from "./Modal";
 export { default as AuthModal } from "./AuthModal";
+export { default as UserSurvey } from "./UserSurvey"
+export { default as Root } from "./Root"
+export { default as GlobalStyle } from "./GlobalStyle"
 
+
+export { Input } from "./Form"
+export { BaseButton, PrimaryButton } from "./Button"
 
 
 

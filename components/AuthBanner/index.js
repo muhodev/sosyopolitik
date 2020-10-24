@@ -10,7 +10,7 @@ function AuthBanner(props) {
                 Oku, üret, paylaş
             </div>
             <div className="banner__description">
-                Reklam yok. Clickbait içerikler yok. Özgün içerikler üretmek için çalışan bir komunite.
+                Özgün içerikler üretmek için çalışan bu komuniteye katıl.
             </div>
             <footer className="banner__footer">
                 <div className="btn-group">
