@@ -1,0 +1,13 @@
+/* Bu sayfa sadece renkleri görebilmek içindir */
+
+:root {
+    --c-primary: #0967d2;
+    --c-primary-dark: #044289;
+    --c-primary-light: #79b8ff;
+    --c-secondary: #f3f4f5;
+    --c-white: #fff;
+
+    --c-border: #dee3e8;
+
+    --border: 1px solid var(--c-border);
+}

@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react'
-import { Modal, Input } from '../'
+import { Modal, Input, Label, PrimaryButton } from '..'
 
-import AuthContext from "../../store/"
-import { PrimaryButton } from '../'
+import AuthContext from "../../store"
 
 function AuthModal(props) {
     const contextData = useContext(AuthContext)
@@ -23,20 +22,16 @@ function AuthModal(props) {
         >
             <form>
                 <div className="input__control">
-                    <label>
-                        Kullanıcı adı
-                    </label>
+                    <Label>Kullanıcı Adı</Label>
                     <Input
-                        placeholder="Geçerli kullanıcı adınızı girin"
+                        placeholder="Geçerli bir kullanıcı adı girin"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         type="text"
                     />
                 </div>
                 <div className="input__control">
-                    <label>
-                        Şifre
-                    </label>
+                    <Label>Şifre</Label>
                     <Input
                         placeholder="Şifreinizi girin"
                         value={password}

@@ -1,18 +1,8 @@
-import React from 'react'
+import styled from 'styled-components'
 
-function Container(props) {
-    let className = "s-container "
-    if (props.flex) {
-        className += "flex ";
-    }
-    if (props.spaceBetween) {
-        className += "space-between "
-    }
-    return (
-        <div className={className}>
-            {props.children}
-        </div>
-    )
-}
+const Container = styled.div`  
+    width: 90%;
+    margin: 0 auto;
+`
 
 export default Container

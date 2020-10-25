@@ -1,18 +1,21 @@
-import React from 'react'
-import styles from "./style.module.scss"
+import styled from "styled-components"
 
-function Input(props) {
-    return (
-        <input
-            id={props.id}
-            type={props.type}
-            className={styles.input}
-            name={props.name}
-            value={props.value}
-            onChange={props.onChange}
-            placeholder={props.placeholder}
-        />
-    )
-}
+const Input = styled.input`
+    border-radius: 4px;
+    outline: none;
+    border: var(--border-200);
+    padding: 9px 14px;
+    font-size: 15px;
+    color: #3b3b3b;
+
+    &:focus {
+        box-shadow: 0 0 0 3px #b7d7f9;
+    }
+
+    &:placeholder {
+        color: #7a7a7a;
+    }
+
+`
 
 export default Input

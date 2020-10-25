@@ -5,9 +5,9 @@ const BaseButton = styled.button`
     border: none;
     font-weight: 500;
     cursor: pointer;
-    font-size: 15px;
-    border-radius: 6px;
-    padding: 9px 13px;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 9px 16px;
 `
 
 export default BaseButton
