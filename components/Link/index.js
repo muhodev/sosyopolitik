@@ -10,7 +10,11 @@ import {
 const StyledLink = styled.a`
     text-decoration: none;
     display: inline-block;
-    &:hover { text-decoration: underline; }
+
+    &:hover { 
+        text-decoration: ${(props) => props.wrapper ? "none" : "underline"}
+    }}
+
     ${space}
     ${color}
     ${fontSize}
@@ -21,10 +25,10 @@ StyledLink.defaultProps = {
     color: "primaryColor"
 }
 
-function Link({ href, children }) {
+function Link({ href = "/", children, wrapper }) {
     return (
         <NextLink href={href} passHref>
-            <StyledLink>
+            <StyledLink wrapper={wrapper}>
                 {children}
             </StyledLink>
         </NextLink>

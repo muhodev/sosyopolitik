@@ -73,11 +73,6 @@
 }
 .post {
     width: 100%;
-    cursor: pointer;
-
-    &--column {
-        grid-template-columns: 1fr !important;
-    }
 
     &__link {
         display: flex;

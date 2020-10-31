@@ -6,7 +6,7 @@ export default [
         author: {
             name: "sosyopolitik"
         },
-        slug: "",
+        slug: "/1",
         date: "3 dakika önce"
     },
     {
@@ -16,7 +16,7 @@ export default [
         author: {
             name: ""
         },
-        slug: "",
+        slug: "/2",
         date: "12 saat önce"
 
     },
@@ -27,7 +27,7 @@ export default [
         author: {
             name: ""
         },
-        slug: "",
+        slug: "/3",
         date: "3 gün önce"
 
     },
@@ -38,7 +38,7 @@ export default [
         author: {
             name: ""
         },
-        slug: "",
+        slug: "/4",
         date: "1 ay önce"
 
     },
@@ -50,7 +50,7 @@ export default [
         author: {
             name: "sosyopolitik"
         },
-        slug: "",
+        slug: "/5",
         date: "1 ay önce"
 
     },
@@ -61,7 +61,7 @@ export default [
         author: {
             name: ""
         },
-        slug: "",
+        slug: "/6",
         date: "1 ay önce",
 
     },
@@ -72,7 +72,7 @@ export default [
         author: {
             name: ""
         },
-        slug: "",
+        slug: "/7",
         date: "2 ay önce"
     },
     {
@@ -82,7 +82,7 @@ export default [
         author: {
             name: ""
         },
-        slug: "",
+        slug: "/8",
         date: "3 ay önce"
     }
 ]

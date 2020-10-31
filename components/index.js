@@ -15,6 +15,7 @@ export { default as Root } from "./Root"
 export { default as GlobalStyle } from "./GlobalStyle"
 export { default as Container } from "./Container"
 export { default as Grid } from "./Grid"
+export { default as Link } from "./Link"
 
 
 export { Input, Label } from "./Form"
