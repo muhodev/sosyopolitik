@@ -1,11 +1,11 @@
 import styled from 'styled-components'
+import { space } from "styled-system"
 import Link from "next/link"
 import Container from "../../Container"
 
 const Header = styled.header`
     width: 100%;
     height: 64px;
-    background-color: var(--c-secondary);
     border-bottom: var(--border-100);
 `
 
@@ -17,15 +17,12 @@ const HeaderContainer = styled(Container)`
 `
 
 const HeaderItem = styled.div`
-    display: ${props => props.visible === "desktop" ? "none" : "flex"};
+    display: flex;
     cursor: pointer;
     align-items: center;
     font-weight: 500;
     font-size: 15px;
-
-    @media (min-width: 1000px) {
-        display: flex;
-    }
+    ${space}
 `
 
 const StyledLink = styled.a`

@@ -1,7 +1,7 @@
 import { useState, useContext } from "react"
-import { HeaderItem, HeaderItemLink } from "../Styled"
+import { HeaderItem, HeaderItemLink, NavDesktopItems } from "../Styled"
 import LayoutContext from "../../../store"
-import { Grid } from "../../"
+import { Flex } from "../../"
 import { headerItems } from "../../../api"
 import { HamburgerMenuIcon, HamburgerMenuContent } from "../HamburgerMenu"
 
@@ -10,25 +10,9 @@ function HeaderNavs() {
     const contextData = useContext(LayoutContext)
 
     return (
-        <Grid cols={`repeat(${headerItems.length + 2}, auto)`} columnGap="20px">
-            {
-                headerItems.map((item, index) => (
-                    <HeaderItem
-                        visible="desktop"
-                        key={index}
-                    >
-                        <HeaderItemLink href={item.slug}>
-                            {item.title}
-                        </HeaderItemLink>
-                    </HeaderItem>
-                ))
-            }
-            <HeaderItem
-                visible="desktop"
-                onClick={() => contextData.toggleAuthModal(true)}
-            >
-                Giriş yap
-            </HeaderItem>
+        <Flex
+            alignItems="center"
+        >
             <HeaderItem>
                 <HamburgerMenuIcon
                     isOpen={isOpenHeader}
@@ -36,7 +20,7 @@ function HeaderNavs() {
                 />
             </HeaderItem>
             <HamburgerMenuContent isOpen={isOpenHeader} />
-        </Grid>
+        </Flex>
     )
 }
 

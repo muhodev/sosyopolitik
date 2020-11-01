@@ -1,15 +1,10 @@
-import React from 'react'
+import styled from "styled-components"
 
-function Banner(props) {
-    return (
-        <div className={`banner banner--${props.color || "default"}`}>
-            <div className="banner__container">
-                {
-                    props.children
-                }
-            </div>
-        </div>
-    )
-}
+const Banner = styled.div`
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border: var(--border-100);
+    padding: 16px;
+`
 
-export default Banner
+export default Banner 

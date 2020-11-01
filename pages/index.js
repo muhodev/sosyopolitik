@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Layout, Post, AuthBanner, BeSponsorBanner, Root } from "../components"
+import { Layout, Post, AuthBanner, BeSponsorBanner, Root, Box } from "../components"
+import { HomePagePostsGrid, PostsGrid } from "../components/Post/Styled"
 import { posts } from "../api"
 import { Title } from '../components/Typography';
 
@@ -10,15 +11,13 @@ function Home(props) {
         <Root>
             <Layout>
                 <main>
-                    <section className="posts">
-                        <div className="posts__container">
-                            <header className="posts__header">
-                                <Title>
+                    <HomePagePostsGrid>
+                        <Box>
+                            <Title pb={4}>
+                                Taze Çıkanlar
+                            </Title>
+                            <PostsGrid>
 
-                                    Taze Çıkanlar
-                                </Title>
-                            </header>
-                            <div className="posts__grid">
                                 {
                                     getPosts.map((post, index) => (
                                         <Post
@@ -32,8 +31,9 @@ function Home(props) {
                                         />
                                     ))
                                 }
-                            </div>
-                        </div>
+                            </PostsGrid>
+
+                        </Box>
                         <aside className="sidebar">
                             <div className="sidebar__container">
                                 <AuthBanner />
@@ -41,7 +41,7 @@ function Home(props) {
 
                             </div>
                         </aside>
-                    </section>
+                    </HomePagePostsGrid>
                 </main>
             </Layout>
         </Root>

@@ -1,12 +1,13 @@
-import { Box } from '../'
+import styled from 'styled-components'
+import Box from '../Box'
 import {
-    alignItems,
-    justifyContent,
-    flexWrap,
-    flexDirection,
+  alignItems,
+  justifyContent,
+  flexWrap,
+  flexDirection,
 } from 'styled-system'
 
-const Flex = Box.extend`
+const Flex = styled(Box)`
   display: flex;
   ${alignItems}
   ${justifyContent}

@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link, Grid } from "../"
-import { PostTitle } from "./Styled"
+import { Link } from "../"
+import { Text } from "../Typography"
+
+import { PostTitle, PostContainer, PostMeta } from "./Styled"
 
 function Post(props) {
     return (
         <article className="post">
-            <Grid cols="1fr 2fr" columnGap="27px">
+            <PostContainer>
                 <header className="post__header">
                     <div className="post__cover">
                         <img src={props.cover} alt="" />
@@ -18,19 +20,19 @@ function Post(props) {
                         </Link>
                     </PostTitle>
 
-                    <div className="post__meta">
-                        <div className="post__author">
+                    <PostMeta>
+                        <Text mr={1}>
                             sosyopolitik
-                                </div>
+                        </Text>
                         <div>
                             ·
                                 </div>
                         <div className="post__date">
                             {props.date}
                         </div>
-                    </div>
+                    </PostMeta>
                 </main>
-            </Grid>
+            </PostContainer>
         </article>
     )
 }

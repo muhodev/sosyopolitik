@@ -3,8 +3,10 @@ import { Overlay } from ".."
 import { Close } from "../Icons"
 
 const ModalContainer = styled.div`
-    border-radius: 4px;
-    width: 33%;
+    ${'' /* border-radius: 4px; */}
+    ${'' /* width: 33%; */}
+    width: 100%;
+    height: 100%;
     min-height: 80%;
     background-color: #fff;
 `

@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Banner } from '../'
+import { Title } from "../Typography"
 import Link from "next/link"
+import LayoutContext from "../../store"
 
 
 function AuthBanner(props) {
+    const contextData = useContext(LayoutContext)
     return (
         <Banner>
-            <div className="banner__title">
+            <Title>
                 Oku, üret, paylaş
-            </div>
+            </Title>
             <div className="banner__description">
                 Özgün içerikler üretmek için çalışan bu komuniteye katıl.
             </div>
@@ -17,9 +20,11 @@ function AuthBanner(props) {
                     <Link href="/">
                         <a className="btn btn--default">Kayıt ol</a>
                     </Link>
-                    <Link href="/">
-                        <a className="btn">Giriş yap</a>
-                    </Link>
+                    <div
+                        onClick={() => contextData.toggleAuthModal(true)}
+                    >
+                        <div className="btn">Giriş yap</div>
+                    </div>
                 </div>
             </footer>
         </Banner>
