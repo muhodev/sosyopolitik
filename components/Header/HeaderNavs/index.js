@@ -13,7 +13,10 @@ function HeaderNavs() {
         <Grid cols={`repeat(${headerItems.length + 2}, auto)`} columnGap="20px">
             {
                 headerItems.map((item, index) => (
-                    <HeaderItem key={index}>
+                    <HeaderItem
+                        visible="desktop"
+                        key={index}
+                    >
                         <HeaderItemLink href={item.slug}>
                             {item.title}
                         </HeaderItemLink>
@@ -21,6 +24,7 @@ function HeaderNavs() {
                 ))
             }
             <HeaderItem
+                visible="desktop"
                 onClick={() => contextData.toggleAuthModal(true)}
             >
                 Giriş yap

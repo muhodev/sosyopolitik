@@ -8,7 +8,10 @@ function Root(props) {
     return (
         <>
             <Head>
-                <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500&display=swap"
+                    rel="stylesheet"
+                />
             </Head>
             <ThemeProvider theme={theme}>
                 <GlobalStyle />

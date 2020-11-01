@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Grid } from "../"
+import { PostTitle } from "./Styled"
 
 function Post(props) {
     return (
@@ -11,12 +12,12 @@ function Post(props) {
                     </div>
                 </header>
                 <main className="post__main">
-
-                    <h3 className="post__title">
+                    <PostTitle>
                         <Link href={`/posts/${props.slug}`}>
                             {props.title}
                         </Link>
-                    </h3>
+                    </PostTitle>
+
                     <div className="post__meta">
                         <div className="post__author">
                             sosyopolitik

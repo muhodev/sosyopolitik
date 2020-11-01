@@ -1,13 +1,14 @@
 import React from 'react'
 import Link from "next/link"
 import { Banner } from '../'
+import { Title } from "../Typography"
 
 function BeSponsorBanner(props) {
     return (
         <Banner>
-            <div className="banner__title">
+            <Title>
                 Sponsorluk
-            </div>
+            </Title>
             <div className="banner__description">
                 Sosyopolitik'e destek olmak istiyorsanız sponsor olabilirsiniz.
             </div>

@@ -13,6 +13,12 @@ export default `
 
         --f-family-primary: "Roboto", sans-serif;
         --f-family-secondary: "Raleway", sans-serif;
+
+        --f-weight-default: 400;
+        --f-weight-medium: 500;
+        --f-weight-bold: 800;
+
+        
     }
 
 `

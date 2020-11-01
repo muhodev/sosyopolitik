@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Layout, Post, AuthBanner, BeSponsorBanner, Root } from "../components"
 import { posts } from "../api"
+import { Title } from '../components/Typography';
 
 function Home(props) {
     const [getPosts, setPosts] = useState(posts);
@@ -12,7 +13,10 @@ function Home(props) {
                     <section className="posts">
                         <div className="posts__container">
                             <header className="posts__header">
-                                <div className="posts__header--text">Taze Çıkanlar</div>
+                                <Title>
+
+                                    Taze Çıkanlar
+                                </Title>
                             </header>
                             <div className="posts__grid">
                                 {

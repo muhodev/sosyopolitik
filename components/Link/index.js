@@ -21,10 +21,6 @@ const StyledLink = styled.a`
     ${fontWeight}
 `
 
-StyledLink.defaultProps = {
-    color: "primaryColor"
-}
-
 function Link({ href = "/", children, wrapper }) {
     return (
         <NextLink href={href} passHref>

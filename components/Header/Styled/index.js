@@ -17,11 +17,15 @@ const HeaderContainer = styled(Container)`
 `
 
 const HeaderItem = styled.div`
-    display: flex;
-    align-items: center;
+    display: ${props => props.visible === "desktop" ? "none" : "flex"};
     cursor: pointer;
+    align-items: center;
     font-weight: 500;
     font-size: 15px;
+
+    @media (min-width: 1000px) {
+        display: flex;
+    }
 `
 
 const StyledLink = styled.a`
