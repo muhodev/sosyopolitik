@@ -1,51 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import { Layout, Post, AuthBanner, BeSponsorBanner, Root, Box } from "../components"
-import { HomePagePostsGrid, PostsGrid } from "../components/Post/Styled"
-import { posts } from "../api"
-import { Title } from '../components/Typography';
+import { AppLayout, Post } from "components";
 
-function Home(props) {
-    const [getPosts, setPosts] = useState(posts);
-
-    return (
-        <Root>
-            <Layout>
-                <main>
-                    <HomePagePostsGrid>
-                        <Box>
-                            <Title pb={4}>
-                                Taze Çıkanlar
-                            </Title>
-                            <PostsGrid>
-
-                                {
-                                    getPosts.map((post, index) => (
-                                        <Post
-                                            key={index}
-                                            title={post.title}
-                                            description={post.description}
-                                            author={post.author}
-                                            cover={post.cover}
-                                            date={post.date}
-                                            slug={post.slug}
-                                        />
-                                    ))
-                                }
-                            </PostsGrid>
-
-                        </Box>
-                        <aside className="sidebar">
-                            <div className="sidebar__container">
-                                <AuthBanner />
-                                <BeSponsorBanner />
-
-                            </div>
-                        </aside>
-                    </HomePagePostsGrid>
-                </main>
-            </Layout>
-        </Root>
-    )
+function Home() {
+  return (
+    <AppLayout>
+      <div className="s-posts">
+        <Post
+          title="The Real Conspiracies Are Right In Front Of You"
+          description="Based on spending a lot of time working finance, dealing with people who retired early in life."
+          author={{
+            displayName: "Jessica Wildfire",
+            avatar:
+              "https://miro.medium.com/fit/c/20/20/2*R5QaBg0eYwqBd31pXSh_qw.jpeg",
+          }}
+          cover="https://news.codecademy.com/content/images/2020/12/html-interview-practice-questions.png"
+          date="Ocak 11"
+        />
+      </div>
+    </AppLayout>
+  );
 }
 
-export default Home
+export default Home;
