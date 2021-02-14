@@ -1,4 +1,4 @@
-.s-layout__container {
-  max-width: 720px;
-  margin: 0 auto;
+.s-layout__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 4fr 2fr;
 }

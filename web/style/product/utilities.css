@@ -1,0 +1,19 @@
+.border-primary {
+  border: var(--border-primary);
+}
+
+.border-bottom-primary {
+  border-bottom: var(--border-primary);
+}
+
+.border-top-primary {
+  border-top: var(--border-primary);
+}
+
+.border-left-primary {
+  border-left: var(--border-primary);
+}
+
+.border-right-primary {
+  border-right: var(--border-primary);
+}

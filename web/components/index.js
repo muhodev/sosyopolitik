@@ -1,3 +1,3 @@
-export { Header, Footer, Post } from "./Product";
+export { Header, Footer, Post, Logo, Sidebar } from "./Product";
 
 export { AppLayout } from "./Layout";

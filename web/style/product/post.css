@@ -1,20 +1,30 @@
 .s-posts {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: var(--border-primary);
 }
 
 .s-post {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;
+  background-color: var(--bg-primary-light);
+  padding: 18px 22px;
+  border-bottom: var(--border-primary);
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+
+.s-post:hover {
+  background-color: var(--bg-primary-light-hover);
 }
 
 .s-post__cover {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .s-post__cover img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: var(--radius-primary);
 }
 
 .s-post__meta {

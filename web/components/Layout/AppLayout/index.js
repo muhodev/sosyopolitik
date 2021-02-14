@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Header } from "components";
+import { Sidebar } from "components";
 
 function AppLayout(props) {
   return (
@@ -9,8 +9,11 @@ function AppLayout(props) {
         <title>Sosyopolitik</title>
       </Head>
       <main className="s-layout">
-        <Header />
-        <div className="s-layout__container">{props.children}</div>
+        <div className="s-layout__grid container">
+          <Sidebar />
+          {props.children}
+          <aside></aside>
+        </div>
       </main>
     </>
   );

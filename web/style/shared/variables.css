@@ -2,6 +2,23 @@
   --f-family-primary: "Inter", sans-serif;
   --f-family-secondary: "Zilla Slab", serif;
 
+  --f-weight-thin: 300;
+  --f-weight-normal: 400;
+  --f-weight-medium: 500;
+  --f-weight-semibold: 600;
+  --f-weight-bold: 700;
+
+  --border-primary: 1px solid var(--c-border-primary);
+
+  --radius-primary: 16px;
+
   --c-text-primary: #111;
   --c-text-secondary: #484848;
+  --c-border-primary: #f1f1f2;
+
+  --c-white: #fff;
+
+  --bg-primary: #fbfbfb;
+  --bg-primary-light: #ffff;
+  --bg-primary-light-hover: #fdfdfd;
 }

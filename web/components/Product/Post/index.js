@@ -1,6 +1,9 @@
 function Post(props) {
   return (
     <article className="s-post">
+      <div className="s-post__cover">
+        <img src={props.cover} />
+      </div>
       <div className="s-post__content">
         <div className="s-post__title">{props.title}</div>
         <div className="s-post__meta">
@@ -15,9 +18,6 @@ function Post(props) {
           <div className="s-post__date t-caption-20">{props.date}</div>
         </div>
         <div className="s-post__description">{props.description}</div>
-      </div>
-      <div className="s-post__cover">
-        <img src={props.cover} />
       </div>
     </article>
   );

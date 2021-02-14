@@ -5,6 +5,6 @@ const router = express.Router({ mergeParams: true });
 
 router.route("/").get(controller.getAll);
 
-router.route("/:userId").get(controller.getOne);
+router.route("/:id").get(controller.getOne);
 
 module.exports = router;
