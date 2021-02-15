@@ -1,9 +1,10 @@
-import { AppLayout, Post } from "components";
+import { AppLayout, Post, PostsHeader, NewPostWidget } from "components";
 
 function Home() {
   return (
     <AppLayout>
       <div className="s-posts">
+        <PostsHeader />
         <Post
           title="The Real Conspiracies Are Right In Front Of You"
           description="Based on spending a lot of time working finance, dealing with people who retired early in life."
@@ -27,6 +28,7 @@ function Home() {
           date="Ocak 11"
         />
       </div>
+      <NewPostWidget />
     </AppLayout>
   );
 }

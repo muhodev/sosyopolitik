@@ -1,6 +1,7 @@
 export { default as Bell } from './Bell'
 export { default as Compass } from './Compass'
 export { default as FileText } from './FileText'
+export { default as Filter } from './Filter'
 export { default as Home } from './Home'
 export { default as LogIn } from './LogIn'
 export { default as Maximize2 } from './Maximize2'

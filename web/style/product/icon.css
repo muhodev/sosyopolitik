@@ -1,5 +1,17 @@
-svg.s-icon {
+.s-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.s-icon--small {
+  font-size: 16px;
+}
+
+.s-icon--default {
+  font-size: 20px;
+}
+
+.s-icon--medium {
+  font-size: 24px;
 }

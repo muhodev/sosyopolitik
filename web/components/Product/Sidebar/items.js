@@ -1,14 +1,6 @@
 import React from "react";
 
-import {
-  Home,
-  Compass,
-  Tag,
-  FileText,
-  Bell,
-  User,
-  LogIn,
-} from "components/Icons";
+import { Home, Compass, Tag, FileText, Bell, User } from "components/Icons";
 
 const sidebarLinkItems = [
   {
@@ -20,11 +12,6 @@ const sidebarLinkItems = [
     title: "Keşfet",
     icon: <Compass />,
     link: "/explore",
-  },
-  {
-    title: "Etiketler",
-    icon: <Tag />,
-    link: "/tags",
   },
   {
     title: "Listeler",

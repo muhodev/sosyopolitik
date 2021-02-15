@@ -12,7 +12,6 @@ function AppLayout(props) {
         <div className="s-layout__grid container">
           <Sidebar />
           {props.children}
-          <aside></aside>
         </div>
       </main>
     </>

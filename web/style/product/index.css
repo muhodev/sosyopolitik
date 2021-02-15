@@ -1,7 +1,11 @@
 @import "./layout.css";
 @import "./post.css";
+@import "./posts.css";
 @import "./header.css";
 @import "./utilities.css";
 @import "./base.css";
 @import "./sidebar.css";
 @import "./icon.css";
+@import "./newPostWidget.css";
+@import "./avatar.css";
+@import "./color.css";

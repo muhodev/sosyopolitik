@@ -1,0 +1,22 @@
+.s-posts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: var(--border-primary);
+}
+.s-posts__header {
+  background-color: var(--bg-primary-light);
+  padding: 18px 22px;
+  border-bottom: var(--border-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+}
+
+.s-posts__title {
+  font-size: 18px;
+  font-weight: 500;
+}
