@@ -1,9 +1,11 @@
 .s-post {
   background-color: var(--bg-primary-light);
   padding: 18px 22px;
-  border-bottom: var(--border-primary);
+  border: var(--border-primary);
   cursor: pointer;
   transition: background-color 300ms;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .s-post:hover {

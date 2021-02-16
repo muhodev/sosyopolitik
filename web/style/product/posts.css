@@ -2,18 +2,19 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  border: var(--border-primary);
+  grid-gap: 6px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .s-posts__header {
   background-color: var(--bg-primary-light);
   padding: 18px 22px;
-  border-bottom: var(--border-primary);
-  cursor: pointer;
+  border: var(--border-primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .s-posts__title {
