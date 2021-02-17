@@ -6,3 +6,5 @@ export { default as Sidebar } from "./Sidebar";
 export { default as NewPostWidget } from "./NewPostWidget";
 export { default as Avatar } from "./Avatar";
 export { default as PostsHeader } from "./PostsHeader";
+export { default as SuggestProfiles } from "./SuggestProfiles";
+export { default as FollowButton } from "./FollowButton";

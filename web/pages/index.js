@@ -1,4 +1,10 @@
-import { AppLayout, Post, PostsHeader, NewPostWidget } from "components";
+import {
+  AppLayout,
+  Post,
+  PostsHeader,
+  NewPostWidget,
+  SuggestProfiles,
+} from "components";
 
 function Home() {
   return (
@@ -28,7 +34,9 @@ function Home() {
           date="Ocak 11"
         />
       </div>
-      <NewPostWidget />
+      <div>
+        <SuggestProfiles />
+      </div>
     </AppLayout>
   );
 }

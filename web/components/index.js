@@ -7,6 +7,8 @@ export {
   NewPostWidget,
   Avatar,
   PostsHeader,
+  SuggestProfiles,
+  FollowButton,
 } from "./Product";
 
 export { AppLayout } from "./Layout";

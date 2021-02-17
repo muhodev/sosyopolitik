@@ -1,0 +1,13 @@
+.s-suggest-profiles {
+  background-color: var(--bg-primary-light);
+  border: var(--border-primary);
+  cursor: pointer;
+  transition: background-color 300ms;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.s-suggest-profile {
+  display: flex;
+  align-items: center;
+}

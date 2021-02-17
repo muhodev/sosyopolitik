@@ -20,7 +20,20 @@
 
 .t-title-30 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
+}
+
+.t-title-40 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.t-paragraph-10 {
+  font-size: 18px;
+}
+
+.t-paragraph-20 {
+  font-size: 15px;
 }
 
 .t-caption-10 {
@@ -33,6 +46,18 @@
   font-weight: 500;
 }
 
+.f-weight-normal {
+  font-weight: 400;
+}
+
+.f-weight-medium {
+  font-weight: 500;
+}
+
+.f-weight-semibold {
+  font-weight: 600;
+}
+
 .f-weight-bold {
   font-weight: 700;
 }
@@ -43,4 +68,8 @@
 
 .t-color-secondary {
   color: var(--c-text-secondary);
+}
+
+.p-default {
+  padding: 18px 22px;
 }

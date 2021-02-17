@@ -33,4 +33,11 @@
 }
 
 .s-avatar--medium {
+  width: 36px;
+  height: 36px;
+}
+
+.s-avatar--big {
+  width: 42px;
+  height: 42px;
 }

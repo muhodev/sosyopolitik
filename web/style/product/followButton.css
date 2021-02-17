@@ -1,0 +1,8 @@
+.btn--follow {
+  border-radius: 26px;
+  background-color: #efefef;
+}
+
+.btn--follow:hover {
+  background-color: #e2e2e2;
+}
