@@ -12,6 +12,6 @@ export {
   Widget,
 } from "./Product";
 
-export { Flex } from "./Shared";
+export { Flex, Box } from "./Shared";
 
 export { AppLayout } from "./Layout";
