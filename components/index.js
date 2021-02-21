@@ -1,17 +1,5 @@
-export {
-  Header,
-  Footer,
-  Post,
-  Logo,
-  Sidebar,
-  NewPostWidget,
-  Avatar,
-  PostsHeader,
-  SuggestProfiles,
-  FollowButton,
-  Widget,
-} from "./Product";
+export * from "./Product";
 
-export { Flex, Box } from "./Shared";
+export * from "./Shared";
 
-export { AppLayout } from "./Layout";
+export * from "./Layout";

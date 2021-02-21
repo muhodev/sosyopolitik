@@ -1,9 +1,9 @@
-import { Avatar } from "components";
+import { Avatar, Widget } from "components";
 import { MoreVertical } from "components/Icons";
 
 function Post(props) {
   return (
-    <article className="s-post">
+    <Widget>
       <div className="s-post__content">
         <div className="s-post__top">
           <div className="s-post__meta">
@@ -27,7 +27,7 @@ function Post(props) {
       <div className="s-post__cover">
         <img src={props.cover} />
       </div>
-    </article>
+    </Widget>
   );
 }
 

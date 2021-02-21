@@ -1,13 +1,16 @@
+import { Widget, Flex } from "components";
 import { Filter } from "components/Icons";
 
-function PostsHeader(props) {
+function PostsHeader() {
   return (
-    <div className="s-posts__header">
-      <div className="s-posts__title">Taze Çıkanlar</div>
-      <div className="s-icon s-icon--default">
-        <Filter />
-      </div>
-    </div>
+    <Widget>
+      <Flex alignItems="center" justifyContent="space-between">
+        <div className="s-posts__title">Taze Çıkanlar</div>
+        <div className="s-icon s-icon--default">
+          <Filter />
+        </div>
+      </Flex>
+    </Widget>
   );
 }
 
