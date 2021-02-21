@@ -9,6 +9,7 @@ export {
   PostsHeader,
   SuggestProfiles,
   FollowButton,
+  Widget,
 } from "./Product";
 
 export { AppLayout } from "./Layout";

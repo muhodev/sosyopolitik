@@ -1,8 +1,8 @@
-import { Avatar, FollowButton } from "components";
+import { Avatar, FollowButton, Widget } from "components";
 
 function SuggestProfiles(props) {
   return (
-    <div className="s-suggest-profiles p-default ">
+    <Widget>
       <div className="s-suggest-profiles__title mb-4 t-title-30">Profiller</div>
       <div>
         <SuggestProfile
@@ -26,7 +26,7 @@ function SuggestProfiles(props) {
           username="@yasniger"
         />
       </div>
-    </div>
+    </Widget>
   );
 }
 

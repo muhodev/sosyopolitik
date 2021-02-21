@@ -8,3 +8,4 @@ export { default as Avatar } from "./Avatar";
 export { default as PostsHeader } from "./PostsHeader";
 export { default as SuggestProfiles } from "./SuggestProfiles";
 export { default as FollowButton } from "./FollowButton";
+export * from "./Widget";
