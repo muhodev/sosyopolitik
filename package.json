@@ -18,7 +18,8 @@
     "react-dom": "^16.13.1",
     "react-is": "^17.0.1",
     "sass": "^1.26.10",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@svgr/cli": "^5.4.0"
