@@ -5,6 +5,7 @@ import {
   SuggestProfiles,
   SuggestLists,
   GridColumn,
+  Footer,
 } from "components";
 
 function Home() {
@@ -41,6 +42,7 @@ function Home() {
         <GridColumn>
           <SuggestProfiles />
           <SuggestLists />
+          <Footer />
         </GridColumn>
       </div>
     </AppLayout>
