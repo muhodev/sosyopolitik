@@ -1,23 +1,32 @@
-import Link from "next/link";
-import { Logo } from "components";
+import { Logo, Link, Grid, Flex, Button } from "components";
 import items from "./items";
 
 function Header(props) {
   return (
     <header className="s-header">
       <div className="s-header__container container">
-        <div className="s-header__items">
-          <HeaderLogoItem />
-        </div>
-        <div className="s-header__items">
-          {items.map((item, index) => (
-            <HeaderLinkItem
-              href={item.link}
-              icon={item.icon}
-              title={item.title}
-            />
-          ))}
-        </div>
+        <Flex height="100%">
+          <Flex>
+            <HeaderLogoItem />
+          </Flex>
+          <Grid
+            height="100%"
+            justifyContent="center"
+            gridTemplateColumns="repeat(3,auto)"
+          >
+            {items.map((item, index) => (
+              <HeaderLinkItem
+                href={item.link}
+                icon={item.icon}
+                title={item.title}
+              />
+            ))}
+          </Grid>
+        </Flex>
+        <Flex>
+          <Button>Oturum Aç</Button>
+          <Button>Kayıt Ol</Button>
+        </Flex>
       </div>
     </header>
   );
@@ -25,13 +34,13 @@ function Header(props) {
 
 function HeaderLogoItem(props) {
   return (
-    <div className="s-header__logo">
-      <Link href="/">
-        <a>
+    <Flex alignItems="center">
+      <div className="s-header__logo">
+        <Link href="/">
           <Logo variant="main" />
-        </a>
-      </Link>
-    </div>
+        </Link>
+      </div>
+    </Flex>
   );
 }
 
@@ -39,10 +48,10 @@ function HeaderLinkItem(props) {
   return (
     <div className="s-header__item">
       <Link href={props.href}>
-        <a>
+        <span className="s-header__item--link">
           <span className="s-header__item--icon">{props.icon}</span>
           <span className="s-header__item--title">{props.title}</span>
-        </a>
+        </span>
       </Link>
     </div>
   );
