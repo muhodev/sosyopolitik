@@ -6,8 +6,8 @@ import {
   Footer,
 } from "components";
 
-function Explore() {
+function Lists() {
   return <AppLayout></AppLayout>;
 }
 
-export default Explore;
+export default Lists;

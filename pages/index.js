@@ -41,7 +41,6 @@ function Home() {
       <div>
         <GridColumn>
           <SuggestProfiles />
-          <SuggestLists />
           <Footer />
         </GridColumn>
       </div>
