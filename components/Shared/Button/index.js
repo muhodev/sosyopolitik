@@ -1,10 +1,6 @@
 function Button(props) {
   return (
-    <button
-      className={`btn btn--${props.variant || "base"} btn--${
-        props.size || "md"
-      }`}
-    >
+    <button className="bg-transparent text-sm font-medium">
       {props.children}
     </button>
   );

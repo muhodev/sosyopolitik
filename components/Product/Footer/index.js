@@ -23,7 +23,7 @@ export function Footer(props) {
       <Widget>
         <Flex flexWrap="wrap">
           {items.map((item, index) => (
-            <Box mr={3}>
+            <Box mr={3} key={index}>
               <Link href={item.href} key={index}>
                 {item.title}
               </Link>

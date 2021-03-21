@@ -3,7 +3,7 @@ import { Avatar, FollowButton, Widget } from "components";
 function SuggestProfiles(props) {
   return (
     <Widget>
-      <div className="s-suggest-profiles__title mb-4 t-title-30">Profiller</div>
+      <div className="font-medium mb-5 text-lg">Profiller</div>
       <div>
         <SuggestProfile
           avatar="https://miro.medium.com/fit/c/20/20/2*R5QaBg0eYwqBd31pXSh_qw.jpeg"
@@ -11,7 +11,7 @@ function SuggestProfiles(props) {
           username="@jessica"
         />
         <SuggestProfile
-          avatar="https://pbs.twimg.com/profile_images/1361437673710379008/F06e-KEY_bigger.jpg"
+          avatar="https://pbs.twimg.com/profile_images/1370286414143832065/hzSUCDtW_400x400.jpg"
           displayname="Büşra Köksal"
           username="@hbusraakoksal"
         />
@@ -32,21 +32,21 @@ function SuggestProfiles(props) {
 
 function SuggestProfile(props) {
   return (
-    <div className="s-suggest-profile mb-5 justify-content-between">
-      <div className="d-flex align-items-center">
+    <div className="grid grid-cols-3 mb-6 gap-2">
+      <div className="flex items-center col-span-2">
         <div className="s-suggest-profile__avatar mr-2">
           <Avatar size="medium" src={props.avatar} />
         </div>
-        <div className="s-suggest-profile__meta">
-          <div className="s-suggest-profile__displayname t-title-40">
+        <div className="s-suggest-profile__meta truncate">
+          <div className="text-sm font-medium truncate">
             {props.displayname}
           </div>
-          <div className="s-suggest-profile__username t-caption-10 t-color-secondary">
-            {props.username}
-          </div>
+          <div className="text-gray-600 text-sm truncate">{props.username}</div>
         </div>
       </div>
-      <FollowButton />
+      <div className="flex items-center">
+        <FollowButton />
+      </div>
     </div>
   );
 }

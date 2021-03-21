@@ -1,8 +1,7 @@
 import { AuthProvider } from "context";
-import "style/index.css";
+import "style/main.css";
 
 export default function MyApp({ Component, pageProps }) {
-  console.log("deneme");
   return (
     <AuthProvider>
       <Component {...pageProps} />

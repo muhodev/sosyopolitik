@@ -11,8 +11,8 @@ import {
 function Home() {
   return (
     <AppLayout>
-      <div>
-        <GridColumn>
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-auto md:mx-36 gap-5">
+        <div className="md:col-span-2 grid grid-cols-1 gap-2 my-4">
           <PostsHeader />
           <Post
             title="The Real Conspiracies Are Right In Front Of You"
@@ -36,13 +36,13 @@ function Home() {
             cover="https://miro.com/blog/wp-content/uploads/2020/12/GE-case-study-650x341.png"
             date="Ocak 11"
           />
-        </GridColumn>
-      </div>
-      <div>
-        <GridColumn>
-          <SuggestProfiles />
-          <Footer />
-        </GridColumn>
+        </div>
+        <div>
+          <div className="grid grid-cols-1 gap-2 my-4">
+            <SuggestProfiles />
+            <Footer />
+          </div>
+        </div>
       </div>
     </AppLayout>
   );

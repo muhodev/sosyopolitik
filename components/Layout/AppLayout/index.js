@@ -6,11 +6,11 @@ function AppLayout(props) {
   return (
     <>
       <Head>
-        <title>Sosyopolitik</title>
+        <title>Sosyopolitik | Oku, üret, paylaş.</title>
       </Head>
-      <main className="s-layout">
+      <main className="bg-gray-50 text-gray-900">
         <Header />
-        <div className="s-layout__grid container">{props.children}</div>
+        <div className="container mx-auto">{props.children}</div>
       </main>
     </>
   );
