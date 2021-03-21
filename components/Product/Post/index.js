@@ -1,31 +1,42 @@
-import { Avatar, Widget } from "components";
+import { Avatar, Widget, PopupMenu } from "components";
 import { MoreVertical } from "components/Icons";
 
 function Post(props) {
   return (
     <Widget>
-      <div className="s-post__content">
-        <div className="s-post__top">
-          <div className="s-post__meta">
-            <div className="s-post__author">
+      <div className="">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center font-medium">
+            <div className="flex items-center">
               <Avatar src={props.author.avatar} />
-              <div className="s-post__author--name t-caption-10">
-                {props.author.displayName}
+              <div className="ml-2 text-sm">{props.author.displayName}</div>
+            </div>
+            <div className="ml-2 text-xs">{props.date}</div>
+          </div>
+          <PopupMenu
+            offsetY={-20}
+            button={
+              <div className="text-lg text-gray-800">
+                <MoreVertical />
               </div>
+            }
+          >
+            <div className="py-2">Listeye Ekle</div>
+            <div className="py-2">
+              {props.author.displayName} adlı kişiyi engelle
             </div>
-            <div className="s-post__date t-caption-20">{props.date}</div>
-          </div>
-          <div className="s-post__action--more">
-            <div className="s-icon s-icon--default">
-              <MoreVertical />
-            </div>
-          </div>
+            <div className="py-2">Gönderiyi Bildir</div>
+          </PopupMenu>
         </div>
-        <div className="s-post__title">{props.title}</div>
-        <div className="s-post__description">{props.description}</div>
+        <div className="font-medium text-sm md:text-base md:font-semibold pt-4 pb-2">
+          {props.title}
+        </div>
+        <div className="text-gray-600 text-sm md:text-base pb-4">
+          {props.description}
+        </div>
       </div>
-      <div className="s-post__cover">
-        <img src={props.cover} />
+      <div className="w-full">
+        <img src={props.cover} className="w-full rounded-xl" />
       </div>
     </Widget>
   );

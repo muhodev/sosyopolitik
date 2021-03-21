@@ -1,9 +1,11 @@
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-export function Link({ href, children, ...props }) {
+function HeaderNavLink({ href, children, ...props }) {
   const router = useRouter();
-  let className = props.className || "s-link ";
+  let className =
+    props.className ||
+    "border-b border-transparent h-full inline-flex items-center";
   if (router.pathname === href) {
     className = `${className} border-gray-700`;
   }
@@ -13,3 +15,5 @@ export function Link({ href, children, ...props }) {
     </NextLink>
   );
 }
+
+export default HeaderNavLink;

@@ -1,11 +1,7 @@
-import styled from "styled-components";
-
-export const Widget = styled.div`
-  background-color: var(--bg-primary-light);
-  padding: 18px 22px;
-  border: var(--border-primary);
-  cursor: pointer;
-  transition: background-color 300ms;
-  border-radius: 6px;
-  overflow: hidden;
-`;
+export function Widget(props) {
+  return (
+    <div className="border border-gray-100 bg-white py-3 px-4 md:py-5 md:px-6 cursor-pointer rounded-md overflow-hidden">
+      {props.children}
+    </div>
+  );
+}

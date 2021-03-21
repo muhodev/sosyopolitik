@@ -4,12 +4,12 @@ import { Filter } from "components/Icons";
 function PostsHeader() {
   return (
     <Widget>
-      <Flex alignItems="center" justifyContent="space-between">
-        <div className="s-posts__title">Taze Çıkanlar</div>
-        <div className="s-icon s-icon--default">
+      <div className="flex items-center justify-between text-base md:text-lg">
+        <div className="font-medium">Taze Çıkanlar</div>
+        <div className="text-gray-800">
           <Filter />
         </div>
-      </Flex>
+      </div>
     </Widget>
   );
 }
