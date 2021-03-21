@@ -1,13 +1,8 @@
 import DefaultAvatar from "./DefaultAvatar";
 
 function Avatar(props) {
-  let size = 6;
-
-  if (props.size === "medium") {
-    size = 8;
-  }
   return (
-    <div className={`w-${size}`}>
+    <div className={props.size === "medium" ? "w-8" : "w-6"}>
       {props.src ? (
         <img src={props.src} alt="" className="w-full rounded-full" />
       ) : (
