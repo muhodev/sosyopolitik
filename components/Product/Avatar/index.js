@@ -9,7 +9,7 @@ function Avatar(props) {
   return (
     <div className={`w-${size}`}>
       {props.src ? (
-        <img src={props.src} alt="" className="w-full w rounded-full" />
+        <img src={props.src} alt="" className="w-full rounded-full" />
       ) : (
         <DefaultAvatar />
       )}
