@@ -1,14 +1,23 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { AppLayout } from "components";
+
+const Home = lazy(() => import("../views/Home"));
+const Lists = lazy(() => import("../views/Lists"));
+const Explore = lazy(() => import("../views/Explore"));
 
 export function App() {
   return (
     <Router>
       <AppLayout>
-        <Switch>
-          <Route path="/lists">Lists</Route>
-          <Route path="/Explore">Explore</Route>
-          <Route path="/">Home</Route>
-        </Switch>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route path="/lists" component={Lists} />
+            <Route path="/explore" component={Explore} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </Suspense>
       </AppLayout>
     </Router>
   );
