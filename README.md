@@ -1,0 +1,1 @@
+# Sosyopolitik.com React Uygulaması
