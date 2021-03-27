@@ -3,8 +3,6 @@ import {
   Post,
   PostsHeader,
   SuggestProfiles,
-  SuggestLists,
-  GridColumn,
   Footer,
 } from "components";
 

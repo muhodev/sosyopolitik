@@ -1,4 +1,4 @@
-import { Logo, Link, Flex, Button } from "components";
+import { Logo, Link, Button } from "components";
 import { HeaderNav } from "./HeaderNav";
 
 function Header() {

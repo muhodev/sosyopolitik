@@ -1,4 +1,4 @@
-import { Widget, Flex } from "components";
+import { Widget } from "components";
 import { Filter } from "components/Icons";
 
 function PostsHeader() {
