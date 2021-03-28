@@ -17,7 +17,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate:icon": "svgr src/icons -d src/components/icons --icon"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9",
     "postcss": "^7",

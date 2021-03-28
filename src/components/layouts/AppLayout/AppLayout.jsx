@@ -1,7 +1,9 @@
+import { Header } from "components";
+
 export function AppLayout(props) {
   return (
     <main>
-      <header></header>
+      <Header />
       <div>{props.children}</div>
     </main>
   );
