@@ -8,3 +8,7 @@ export * from "./Profiles";
 export * from "./User";
 export * from "./FollowButton";
 export * from "./Footer";
+export * from "./Portal";
+export * from "./Overlay";
+export * from "./Modal";
+export * from "./Auth";
