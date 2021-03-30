@@ -1,7 +1,7 @@
-import { Logo } from "components";
+import { Logo, Button } from "components";
 import { Explore, Home, Lists } from "components/icons";
 
-export function Header(props) {
+export function Header() {
   return (
     <header className="flex justify-center h-14 bg-white  shadow-sm">
       <div className="container flex items-center justify-between">
@@ -29,8 +29,12 @@ export function Header(props) {
           </div>
         </div>
         <div className="flex items-center">
-          <div>Oturum Aç</div>
-          <div>Kaydol</div>
+          <div>
+            <Button>Oturum Aç</Button>
+          </div>
+          <div>
+            <Button variant="primary">Kaydol</Button>
+          </div>
         </div>
       </div>
     </header>

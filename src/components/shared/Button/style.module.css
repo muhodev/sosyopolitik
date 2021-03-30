@@ -1,0 +1,16 @@
+.button {
+  @apply px-5 py-2 font-medium rounded-full  text-sm 
+
+  focus:outline-none;
+}
+
+.primary {
+  @apply text-white bg-black hover:bg-gray-900;
+}
+
+.secondary {
+  @apply text-gray-700 bg-gray-100 hover:bg-gray-200;
+}
+
+.outline {
+}
