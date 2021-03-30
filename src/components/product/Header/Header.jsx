@@ -7,14 +7,14 @@ export function Header() {
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
           <Logo />
-          <div className="ml-6 flex items-center">
-            <div className="flex items-center mr-6">
+          <div className="mx-8 flex items-center">
+            <div className="flex items-center mr-8">
               <div className="text-gray-800 mr-1 text-xl">
                 <Home />
               </div>
               <span>Ana sayfa</span>
             </div>
-            <div className="flex items-center mr-6">
+            <div className="flex items-center mr-8">
               <div className="text-gray-800 mr-1 text-xl">
                 <Explore />
               </div>
