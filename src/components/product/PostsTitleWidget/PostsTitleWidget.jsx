@@ -1,14 +1,18 @@
-import { Card } from "components";
+import { Card, Button } from "components";
 
 export function PostsTitleWidget(props) {
   return (
     <Card>
-      <header className="flex items-center text-gray-700">
-        <div className="rounded-3xl bg-gray-100 px-3 py-1 tex-center mr-4 font-medium">
-          Popüler
+      <header className="inline-flex items-center text-gray-700">
+        <div className="">
+          <Button variant="secondary">Popüler</Button>
         </div>
-        <div className="rounded-3xl  px-3 py-1 tex-center mr-4">En son</div>
-        <div className="rounded-3xl px-3 py-1 tex-center">Takip Ettiklerin</div>
+        <div className="">
+          <Button>Taze Çıkanlar</Button>
+        </div>
+        <div className="">
+          <Button>Takip Ettiklerin</Button>
+        </div>
       </header>
     </Card>
   );
