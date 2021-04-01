@@ -1,0 +1,19 @@
+.icon {
+  @apply inline-flex;
+}
+
+.xs {
+}
+
+.sm {
+}
+
+.base {
+  @apply text-2xl;
+}
+
+.lg {
+}
+
+.xl {
+}

@@ -1,4 +1,4 @@
-import { Logo, Button } from "components";
+import { Logo, ButtonLink } from "components";
 import { Explore, Home, Lists } from "components/icons";
 
 export function Header() {
@@ -30,10 +30,12 @@ export function Header() {
         </div>
         <div className="flex items-center">
           <div>
-            <Button>Oturum Aç</Button>
+            <ButtonLink href="?login=true">Oturum Aç</ButtonLink>
           </div>
           <div>
-            <Button variant="primary">Kaydol</Button>
+            <ButtonLink variant="primary" href="?signup=true">
+              Kaydol
+            </ButtonLink>
           </div>
         </div>
       </div>
