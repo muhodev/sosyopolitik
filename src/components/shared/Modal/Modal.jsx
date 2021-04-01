@@ -7,11 +7,11 @@ export function Modal(props) {
       <Overlay closeModal={props.closeModal}>
         <div
           onClick={(e) => e.stopPropagation()}
-          className="w-4/12 bg-white rounded-md shadow-2xl z-50"
+          className="w-4/12 bg-white rounded-md shadow-2xl py-4 px-5 z-50"
         >
-          <header className="flex justify-between">
+          <header className="flex justify-between items-center mb-4">
             <h1>{props.title}</h1>
-            <Button onClick={props.closeModal}>
+            <Button variant="icon" onClick={props.closeModal}>
               <Icon icon={<Close />} size="base" />
             </Button>
           </header>
