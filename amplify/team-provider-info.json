@@ -10,6 +10,11 @@
       "StackName": "amplify-sosyopolitikcom-dev-220832",
       "StackId": "arn:aws:cloudformation:us-east-2:180611416642:stack/amplify-sosyopolitikcom-dev-220832/0ba108f0-94b0-11eb-95a2-06902a069862",
       "AmplifyAppId": "d6mrw3ruw1bh4"
+    },
+    "categories": {
+      "auth": {
+        "sosyopolitikcomb98e9a45": {}
+      }
     }
   }
 }

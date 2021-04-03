@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "sosyopolitikcomb98e9a45": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
