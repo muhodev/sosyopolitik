@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sosyopolitikcom-dev-220832-authRole",
+      "UnauthRoleArn": "arn:aws:iam::180611416642:role/amplify-sosyopolitikcom-dev-220832-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::180611416642:role/amplify-sosyopolitikcom-dev-220832-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-sosyopolitikcom-dev-220832-deployment",
+      "UnauthRoleName": "amplify-sosyopolitikcom-dev-220832-unauthRole",
+      "StackName": "amplify-sosyopolitikcom-dev-220832",
+      "StackId": "arn:aws:cloudformation:us-east-2:180611416642:stack/amplify-sosyopolitikcom-dev-220832/0ba108f0-94b0-11eb-95a2-06902a069862",
+      "AmplifyAppId": "d6mrw3ruw1bh4"
+    }
+  }
+}
