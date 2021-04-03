@@ -3,47 +3,62 @@ import { Modal, Input, Button, Link } from "components";
 import { validationSchema } from "./validationSchema";
 
 export function Signup(props) {
-  const { handleSubmit, getFieldProps } = useFormik({
-    initialValues: { email: "", username: "", password: "" },
+  const { handleSubmit, getFieldProps, errors, touched, isValid } = useFormik({
+    initialValues: { displayName: "", email: "", username: "", password: "" },
     validationSchema,
+    validateOnMount: true,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
   });
   return (
     <Modal title="Daha fazlası için kaydolun">
-      <div className="">
+      <form onSubmit={handleSubmit}>
         <div className="mb-5">
           <Input
-            placeholder="Email adresini girin"
-            label="Email"
+            label="İsim"
+            type="text"
             autoFocus={true}
+            hasError={errors.displayName && touched.displayName}
+            errorMessage={errors.displayName}
+            {...getFieldProps("displayName")}
+          />
+        </div>
+        <div className="mb-5">
+          <Input
+            label="Email"
+            hasError={errors.email && touched.email}
+            errorMessage={errors.email}
             {...getFieldProps("email")}
           />
         </div>
         <div className="mb-5">
           <Input
-            placeholder="Bir kullanıcı adı belirleyin"
             label="Kullanıcı Adı"
+            hasError={errors.username && touched.username}
+            errorMessage={errors.username}
             {...getFieldProps("username")}
           />
         </div>
         <div>
           <Input
-            placeholder="Şifre oluşturun"
             label="Şifre"
             type="password"
+            hasError={errors.password && touched.password}
+            errorMessage={errors.password}
             {...getFieldProps("password")}
           />
         </div>
         <div className="mt-5 mb-2">
-          <Button variant="primary">Kaydol</Button>
+          <Button type="submit" variant="primary" disabled={!isValid}>
+            Kaydol
+          </Button>
         </div>
         <div className="text-sm">
           <span className="text-gray-600">Hesabınız var mı?</span>
           <Link href="/?login=true"> Giriş yapın</Link>
         </div>
-      </div>
+      </form>
     </Modal>
   );
 }

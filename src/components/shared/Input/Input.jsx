@@ -7,25 +7,35 @@ export function Input({
   placeholder,
   autoFocus,
   label,
+  hasError,
+  errorMessage,
   ...rest
 }) {
-  console.log();
   return (
-    <div className={style.inputContainer}>
-      {label && (
-        <label
-          className={cn(style.label, { [style.top]: rest.value.length > 0 })}
-        >
-          {label}
-        </label>
+    <>
+      <div
+        className={cn(style.inputContainer, {
+          [style.error]: hasError,
+        })}
+      >
+        {label && (
+          <label
+            className={cn(style.label, { [style.top]: rest.value.length > 0 })}
+          >
+            {label}
+          </label>
+        )}
+        <input
+          type={type}
+          className={cn(style.input)}
+          onClick={onClick}
+          autoFocus={autoFocus}
+          {...rest}
+        />
+      </div>
+      {errorMessage && hasError && (
+        <div className={cn(style.errorMessage)}>{errorMessage}</div>
       )}
-      <input
-        type={type}
-        className={cn(style.input)}
-        onClick={onClick}
-        autoFocus={autoFocus}
-        {...rest}
-      />
-    </div>
+    </>
   );
 }

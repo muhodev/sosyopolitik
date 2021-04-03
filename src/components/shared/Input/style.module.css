@@ -23,3 +23,15 @@
 .top + .input {
   @apply pb-0;
 }
+
+.error label {
+  @apply text-red-500;
+}
+
+.error input {
+  box-shadow: 0 0 0 2px rgb(255 17 0 / 53%) !important;
+}
+
+.errorMessage {
+  @apply pt-1 text-xs text-red-500;
+}
