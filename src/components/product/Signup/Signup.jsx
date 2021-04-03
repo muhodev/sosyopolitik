@@ -1,10 +1,8 @@
-import { useHistory } from "react-router-dom";
 import { useFormik } from "formik";
 import { Modal, Input, Button, Link } from "components";
 import { validationSchema } from "./validationSchema";
 
 export function Signup(props) {
-  const history = useHistory();
   const { handleSubmit, getFieldProps } = useFormik({
     initialValues: { email: "", username: "", password: "" },
     validationSchema,
@@ -13,10 +11,7 @@ export function Signup(props) {
     },
   });
   return (
-    <Modal
-      closeModal={() => history.goBack()}
-      title="Daha fazlası için kaydolun"
-    >
+    <Modal title="Daha fazlası için kaydolun">
       <div className="">
         <div className="mb-5">
           <Input
