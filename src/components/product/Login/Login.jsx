@@ -1,25 +1,41 @@
+import { useHistory } from "react-router-dom";
 import { useFormik } from "formik";
 import { Auth } from "aws-amplify";
 import { Modal, Input, Button, Link } from "components";
+import { useAuth } from "context";
 import { validationSchema } from "./validationSchema";
 
 export function Login() {
-  const { handleSubmit, getFieldProps, errors, touched, isValid } = useFormik({
+  const history = useHistory();
+  const { setUser } = useAuth();
+  const {
+    handleSubmit,
+    getFieldProps,
+    errors,
+    touched,
+    isValid,
+    isSubmitting,
+  } = useFormik({
     initialValues: { username: "", password: "" },
     validationSchema,
     validateOnMount: true,
-    onSubmit: (values) => {
-      loginHandler(values.username, values.password);
+    onSubmit: async (values, { setSubmitting }) => {
+      await loginHandler(values.username, values.password);
+      setSubmitting(false);
     },
   });
 
   async function loginHandler(username, password) {
     try {
-      const response = await Auth.signIn({ username, password });
-      console.log(response);
+      const user = await Auth.signIn({ username, password });
+      setUser(user);
+      history.push(history.location.pathname);
     } catch (err) {
       console.error(new Error(err));
     }
+  }
+  {
+    console.log(isSubmitting);
   }
 
   return (
@@ -48,7 +64,11 @@ export function Login() {
           </div>
           <div>
             <div className="mt-7 mb-3">
-              <Button disabled={!isValid} type="submit" variant="primary">
+              <Button
+                disabled={!isValid || isSubmitting}
+                type="submit"
+                variant="primary"
+              >
                 Giriş Yap
               </Button>
             </div>
