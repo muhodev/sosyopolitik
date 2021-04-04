@@ -21,3 +21,7 @@
 .icon {
   @apply p-1;
 }
+
+.quiet {
+  @apply p-0;
+}

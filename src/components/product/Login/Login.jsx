@@ -1,13 +1,13 @@
-import { useHistory } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { useFormik } from "formik";
 import { Auth } from "aws-amplify";
-import { Modal, Input, Button, Link } from "components";
+import { Input, Button, Link } from "components";
 import { useAuth } from "context";
 import { validationSchema } from "./validationSchema";
 
-export function Login() {
+export function Login(props) {
   const history = useHistory();
-  const { setUser } = useAuth();
+  const { setUser, state } = useAuth();
   const {
     handleSubmit,
     getFieldProps,
@@ -34,51 +34,54 @@ export function Login() {
       console.error(new Error(err));
     }
   }
-  {
-    console.log(isSubmitting);
+
+  if (state.user) {
+    return <Redirect to={history.location.pathname} />;
   }
 
   return (
-    <Modal title="Giriş Yapın">
-      <div className="">
-        <form onSubmit={handleSubmit}>
-          <div className="mb-5">
-            <Input
-              placeholder="Kullanıcı adınızı girin"
-              label="Kullanıcı Adı"
-              autoFocus={true}
-              {...getFieldProps("username")}
-              hasError={errors.username && touched.username}
-              errorMessage={errors.username}
-            />
+    <div className="">
+      <form onSubmit={handleSubmit}>
+        <div className="mb-7 text-xl">
+          <h1>Sosyopolitik'e giriş yapın</h1>
+        </div>
+        <div className="mb-5">
+          <Input
+            placeholder="Kullanıcı adınızı girin"
+            label="Kullanıcı Adı"
+            {...getFieldProps("username")}
+            hasError={errors.username && touched.username}
+            errorMessage={errors.username}
+          />
+        </div>
+        <div>
+          <Input
+            placeholder="Şifrenizi girin"
+            label="Şifre"
+            type="password"
+            hasError={errors.password && touched.password}
+            errorMessage={errors.password}
+            {...getFieldProps("password")}
+          />
+        </div>
+        <div>
+          <div className="mt-7 mb-3">
+            <Button
+              disabled={!isValid || isSubmitting}
+              type="submit"
+              variant="primary"
+            >
+              Giriş Yap
+            </Button>
           </div>
-          <div>
-            <Input
-              placeholder="Şifrenizi girin"
-              label="Şifre"
-              type="password"
-              hasError={errors.password && touched.password}
-              errorMessage={errors.password}
-              {...getFieldProps("password")}
-            />
+          <div className="text-sm">
+            <span className="text-gray-600">Hesabınız yok mu?</span>
+            <Button isQuiet={true} onClick={() => props.switchType("signup")}>
+              Kaydolun
+            </Button>
           </div>
-          <div>
-            <div className="mt-7 mb-3">
-              <Button
-                disabled={!isValid || isSubmitting}
-                type="submit"
-                variant="primary"
-              >
-                Giriş Yap
-              </Button>
-            </div>
-            <div className="text-sm">
-              <span className="text-gray-600">Hesabınız yok mu?</span>
-              <Link href="/?signup=true"> Kaydolun</Link>
-            </div>
-          </div>
-        </form>
-      </div>
-    </Modal>
+        </div>
+      </form>
+    </div>
   );
 }

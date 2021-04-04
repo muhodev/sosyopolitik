@@ -7,11 +7,12 @@ export function Button({
   disabled,
   children,
   type,
+  isQuiet,
   ...rest
 }) {
   return (
     <button
-      className={cn(style.button, style[variant])}
+      className={cn(style.button, style[variant], { [style.quiet]: isQuiet })}
       onClick={onClick}
       type={type}
       disabled={disabled}

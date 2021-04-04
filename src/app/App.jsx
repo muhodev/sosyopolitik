@@ -1,37 +1,28 @@
-import { lazy, Suspense, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Auth } from "aws-amplify";
 
-import { AppLayout } from "components";
 import { useAuth } from "context";
-
-const Home = lazy(() => import("../views/Home"));
-const Lists = lazy(() => import("../views/Lists"));
-const Explore = lazy(() => import("../views/Explore"));
-const Logout = lazy(() => import("../views/Logout"));
+import { WithoutAuthApp, AuthApp } from "app";
 
 export function App() {
-  const { setUser } = useAuth();
+  const { setUser, state } = useAuth();
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     Auth.currentAuthenticatedUser().then(
       (user) => {
         setUser(user);
+        setLoading(false);
       },
-      (error) => alert(error.message)
+      (error) => setLoading(false)
     );
   }, []);
-  return (
-    <Router>
-      <AppLayout>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Switch>
-            <Route path="/lists" component={Lists} />
-            <Route path="/explore" component={Explore} />
-            <Route path="/logout" component={Logout} />
-            <Route path="/" component={Home} />
-          </Switch>
-        </Suspense>
-      </AppLayout>
-    </Router>
-  );
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!state.user) {
+    return <WithoutAuthApp />;
+  }
+  return <AuthApp />;
 }
