@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/posts",
+            "lambdaFunction": "createpost",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/posts"
+        }
+    ],
+    "resourceName": "sosyopolitikapi",
+    "apiName": "sosyopolitikapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "createpost"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-sosyopolitikcom-dev-220832-authRole",
+        "unAuthRoleName": "amplify-sosyopolitikcom-dev-220832-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "createpost",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

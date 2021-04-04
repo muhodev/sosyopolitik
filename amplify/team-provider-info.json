@@ -12,8 +12,14 @@
       "AmplifyAppId": "d6mrw3ruw1bh4"
     },
     "categories": {
+      "function": {
+        "createpost": {
+          "deploymentBucketName": "amplify-sosyopolitikcom-dev-220832-deployment",
+          "s3Key": "amplify-builds/createpost-736a6c33463272596f6f-build.zip"
+        }
+      },
       "auth": {
-        "sosyopolitikcomb98e9a45": {}
+        "sosyopolitikcoma7c981d3": {}
       }
     }
   }

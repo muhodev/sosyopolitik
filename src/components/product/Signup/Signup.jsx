@@ -1,16 +1,54 @@
 import { useFormik } from "formik";
+import { useHistory } from "react-router-dom";
+import { Auth } from "aws-amplify";
 import { Modal, Input, Button, Link } from "components";
 import { validationSchema } from "./validationSchema";
 
 export function Signup(props) {
-  const { handleSubmit, getFieldProps, errors, touched, isValid } = useFormik({
+  const history = useHistory();
+  const {
+    handleSubmit,
+    getFieldProps,
+    errors,
+    touched,
+    isValid,
+    isSubmitting,
+  } = useFormik({
     initialValues: { displayName: "", email: "", username: "", password: "" },
     validationSchema,
+
     validateOnMount: true,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: async (values, { setSubmitting }) => {
+      await signupHandler({
+        username: values.username,
+        password: values.password,
+        email: values.email,
+        name: values.displayName,
+      });
+      setSubmitting(false);
     },
   });
+
+  const signupHandler = async (payload) => {
+    try {
+      await Auth.signUp({
+        username: payload.username,
+        password: payload.password,
+        attributes: {
+          email: payload.email,
+          name: payload.name,
+          picture: "default",
+        },
+      });
+      history.push(
+        history.location.pathname +
+          "?confirm-signup=true&username=" +
+          payload.username
+      );
+    } catch (error) {
+      alert(error.message);
+    }
+  };
   return (
     <Modal title="Daha fazlası için kaydolun">
       <form onSubmit={handleSubmit}>
@@ -50,7 +88,11 @@ export function Signup(props) {
           />
         </div>
         <div className="mt-5 mb-2">
-          <Button type="submit" variant="primary" disabled={!isValid}>
+          <Button
+            type="submit"
+            variant="primary"
+            disabled={!isValid || isSubmitting}
+          >
             Kaydol
           </Button>
         </div>

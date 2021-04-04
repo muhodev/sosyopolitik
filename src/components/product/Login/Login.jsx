@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { Auth } from "aws-amplify";
 import { Modal, Input, Button, Link } from "components";
 import { validationSchema } from "./validationSchema";
 
@@ -8,9 +9,18 @@ export function Login() {
     validationSchema,
     validateOnMount: true,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      loginHandler(values.username, values.password);
     },
   });
+
+  async function loginHandler(username, password) {
+    try {
+      const response = await Auth.signIn({ username, password });
+      console.log(response);
+    } catch (err) {
+      console.error(new Error(err));
+    }
+  }
 
   return (
     <Modal title="Giriş Yapın">

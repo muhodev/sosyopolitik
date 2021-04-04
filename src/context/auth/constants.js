@@ -1,1 +1,1 @@
-export const TOGGLE_AUTH_MODAL = "TOGGLE_AUTH_MODAL";
+export const SET_USER = "SET_USER";

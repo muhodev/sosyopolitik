@@ -1,10 +1,9 @@
-import { TOGGLE_AUTH_MODAL } from "context";
+import { SET_USER } from "context";
 
 export function authReducer(state, action) {
   switch (action.type) {
-    case TOGGLE_AUTH_MODAL:
-      return state;
-
+    case SET_USER:
+      return { ...state, user: action.payload };
     default:
       return state;
   }

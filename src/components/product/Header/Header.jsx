@@ -1,7 +1,9 @@
+import { useAuth } from "context";
 import { Logo, ButtonLink } from "components";
 import { Explore, Home, Lists } from "components/icons";
 
 export function Header() {
+  const { state } = useAuth();
   return (
     <header className="flex justify-center h-14 bg-white  shadow-sm">
       <div className="container flex items-center justify-between">
@@ -29,14 +31,26 @@ export function Header() {
           </div>
         </div>
         <div className="flex items-center">
-          <div>
-            <ButtonLink href="?login=true">Oturum Aç</ButtonLink>
-          </div>
-          <div>
-            <ButtonLink variant="primary" href="?signup=true">
-              Kaydol
-            </ButtonLink>
-          </div>
+          {state.user ? (
+            <>
+              {console.log(state.user)}
+              <div>{state.user.username}</div>
+              <div>
+                <ButtonLink href="/logout">Çıkış Yap</ButtonLink>
+              </div>
+            </>
+          ) : (
+            <>
+              <div>
+                <ButtonLink href="?login=true">Oturum Aç</ButtonLink>
+              </div>
+              <div>
+                <ButtonLink variant="primary" href="?signup=true">
+                  Kaydol
+                </ButtonLink>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </header>

@@ -11,3 +11,4 @@ export * from "./Footer";
 export * from "./Auth";
 export * from "./Login";
 export * from "./Signup";
+export * from "./VerifySignup";
