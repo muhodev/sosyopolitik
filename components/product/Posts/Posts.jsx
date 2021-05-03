@@ -1,8 +1,8 @@
-import { Post } from "components";
+import { Post } from 'components';
 
 export function Posts(props) {
   return (
-    <div className="grid gap-3">
+    <div className="grid">
       {props.data.map((post, index) => (
         <Post key={index} data={post} />
       ))}

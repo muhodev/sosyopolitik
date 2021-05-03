@@ -1,5 +1,5 @@
 .button {
-  @apply px-5 py-2 font-medium rounded-full  text-sm 
+  @apply px-5 py-2 font-bold rounded-full  text-sm 
   focus:outline-none;
 }
 
@@ -8,7 +8,11 @@
 }
 
 .primary {
-  @apply text-white bg-black hover:bg-gray-900;
+  background-color: var(--c-primary);
+}
+
+.primary:hover {
+  background-color: var(--c-primary-hover);
 }
 
 .secondary {

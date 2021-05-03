@@ -1,0 +1,9 @@
+.postsGrid {
+  @apply w-full grid grid-cols-2 grid-rows-3 p-5 gap-5;
+  background-color: var(--c-bg-dark);
+  color: var(--c-text-white);
+}
+
+.postsGrid > div:first-child {
+  @apply row-span-3;
+}

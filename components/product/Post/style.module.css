@@ -1,0 +1,20 @@
+.coverContainer {
+  @apply rounded-xl 
+  relative
+  h-24 w-full;
+}
+
+.cover {
+  @apply w-full h-full
+
+    rounded-md
+    bg-left bg-cover bg-no-repeat;
+}
+
+.coverImage {
+  @apply h-full w-full
+    opacity-0 
+    absolute;
+  inset: 0px;
+  z-index: -1;
+}
