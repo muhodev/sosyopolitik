@@ -20,6 +20,14 @@
   background-color: var(--c-bg-dark);
 }
 
+.c-bg-primary {
+  background-color: var(--c-bg-primary);
+}
+
+.c-bg-secondary {
+  background-color: var(--c-bg-secondary);
+}
+
 .c-text-primary {
   color: var(--c-text-primary);
 }

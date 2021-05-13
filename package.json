@@ -14,7 +14,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate:icon": "svgr src/icons -d src/components/icons --icon"
+    "generate:icon": "svgr icons -d components/icons --icon"
   },
   "devDependencies": {
     "@svgr/cli": "^5.5.0",

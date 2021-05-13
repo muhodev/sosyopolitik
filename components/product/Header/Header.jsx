@@ -3,7 +3,7 @@ import { Explore, Home, Lists } from 'components/icons';
 
 export function Header() {
   return (
-    <header className="flex items-center text-white c-bg-dark h-14 px-5 shadow-sm">
+    <header className="flex items-center h-14 px-5 shadow-sm c-bg-secondary sticky top-0 left-0">
       <div className=" w-full flex items-center justify-between ">
         <div className="flex items-center">
           <Logo />

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function SvgExplore(props) {
+function SvgMore(props) {
   return (
     <svg
       width="1em"
@@ -12,17 +12,16 @@ function SvgExplore(props) {
     >
       <path
         clipRule="evenodd"
-        d="M2.75 12c0 6.937 2.313 9.25 9.25 9.25 6.937 0 9.25-2.313 9.25-9.25 0-6.937-2.313-9.25-9.25-9.25-6.937 0-9.25 2.313-9.25 9.25z"
-        stroke="#130F26"
+        d="M2.75 12c0-6.937 2.313-9.25 9.25-9.25 6.937 0 9.25 2.313 9.25 9.25 0 6.937-2.313 9.25-9.25 9.25-6.937 0-9.25-2.313-9.25-9.25z"
+        stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        clipRule="evenodd"
-        d="M8.698 15.302l1.574-5.03 5.03-1.574-1.574 5.03-5.03 1.574z"
-        stroke="#130F26"
-        strokeWidth={1.5}
+        d="M15.993 12h.01M11.995 12h.009M7.995 12h.01"
+        stroke="currentColor"
+        strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -30,4 +29,4 @@ function SvgExplore(props) {
   );
 }
 
-export default SvgExplore;
+export default SvgMore;

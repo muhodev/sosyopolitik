@@ -6,53 +6,9 @@ import {
   HomeTopFeeds
 } from 'components';
 
-const fakeTopPosts = [
-  {
-    title: 'Ozan Elektronik Para, UnionPay International üyesi oldu',
-
-    tags: [],
-    author: {
-      displayName: 'SpGündem'
-    },
-    cover:
-      'https://static01.nyt.com/images/2021/05/03/world/00afghan-withdrawal-top/00afghan-withdrawal-top-threeByTwoMediumAt2X-v2.jpg?format=pjpg&quality=75&auto=webp&disable=upscale'
-  },
-  {
-    title: 'Ozan Elektronik Para, UnionPay International üyesi oldu',
-
-    tags: [],
-    author: {
-      displayName: 'SpGündem'
-    },
-    cover:
-      'https://static01.nyt.com/images/2021/05/03/us/politics/03dc-bar/merlin_186812604_6d0aa88e-eac9-4b9a-b4a3-c667b89f0b87-threeByTwoSmallAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale'
-  },
-  {
-    title: 'Ozan Elektronik Para, UnionPay International üyesi oldu',
-
-    tags: [],
-    author: {
-      displayName: 'SpGündem'
-    },
-    cover:
-      'https://static01.nyt.com/images/2021/04/22/multimedia/00IHW-childfree-image2/00IHW-childfree-image2-threeByTwoMediumAt2X-v4.jpg?format=pjpg&quality=75&auto=webp&disable=upscale'
-  },
-  {
-    title: 'Ozan Elektronik Para, UnionPay International üyesi oldu',
-
-    tags: [],
-    author: {
-      displayName: 'SpGündem'
-    },
-    cover:
-      'https://static01.nyt.com/images/2021/04/26/multimedia/26sp-resilience-pets/26sp-resilience-pets-threeByTwoSmallAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale'
-  }
-];
-
 export default function Home() {
   return (
     <>
-      <HomeTopFeeds posts={fakeTopPosts} />
       <div className="w-full flex justify-center">
         <div className="w-9/12 my-5">
           <div className="grid grid-cols-3 gap-8">
