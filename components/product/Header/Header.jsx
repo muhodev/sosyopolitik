@@ -10,10 +10,10 @@ export function Header() {
         </div>
         <div className="flex items-center">
           <div>
-            <ButtonLink href="?login=true">Oturum Aç</ButtonLink>
+            <ButtonLink href="/login">Oturum Aç</ButtonLink>
           </div>
           <div>
-            <ButtonLink variant="primary" href="?signup=true">
+            <ButtonLink variant="primary" href="/signup">
               Kaydol
             </ButtonLink>
           </div>

@@ -1,6 +1,5 @@
-import { Cover, PostTitle } from 'components';
-import { Like, Comment, MoreVertical, Bookmark, Share } from 'components/icons';
-import style from './style.module.css';
+import { PostTitle } from 'components';
+import { Like, Comment, MoreVertical, Bookmark } from 'components/icons';
 
 export function Post({ data }) {
   return (
@@ -20,7 +19,7 @@ export function Post({ data }) {
           )}
 
           <div className="flex justify-between items-center mt-6 text-xl">
-            <div className="grid gap-6 grid-cols-3  w-auto">
+            <div className="grid gap-7 grid-cols-3  w-auto">
               <div>
                 <Like />
               </div>

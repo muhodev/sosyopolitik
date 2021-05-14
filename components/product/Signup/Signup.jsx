@@ -1,15 +1,15 @@
-import { useFormik } from "formik";
-import { Modal, Input, Button, Link } from "components";
-import { validationSchema } from "./validationSchema";
+import { useFormik } from 'formik';
+import { Modal, Input, Button, Link } from 'components';
+import { validationSchema } from './validationSchema';
 
 export function Signup(props) {
   const { handleSubmit, getFieldProps, errors, touched, isValid } = useFormik({
-    initialValues: { displayName: "", email: "", username: "", password: "" },
+    initialValues: { displayName: '', email: '', username: '', password: '' },
     validationSchema,
     validateOnMount: true,
-    onSubmit: (values) => {
+    onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
-    },
+    }
   });
   return (
     <Modal title="Daha fazlası için kaydolun">
@@ -21,7 +21,7 @@ export function Signup(props) {
             autoFocus={true}
             hasError={errors.displayName && touched.displayName}
             errorMessage={errors.displayName}
-            {...getFieldProps("displayName")}
+            {...getFieldProps('displayName')}
           />
         </div>
         <div className="mb-5">
@@ -29,7 +29,7 @@ export function Signup(props) {
             label="Email"
             hasError={errors.email && touched.email}
             errorMessage={errors.email}
-            {...getFieldProps("email")}
+            {...getFieldProps('email')}
           />
         </div>
         <div className="mb-5">
@@ -37,7 +37,7 @@ export function Signup(props) {
             label="Kullanıcı Adı"
             hasError={errors.username && touched.username}
             errorMessage={errors.username}
-            {...getFieldProps("username")}
+            {...getFieldProps('username')}
           />
         </div>
         <div>
@@ -46,7 +46,7 @@ export function Signup(props) {
             type="password"
             hasError={errors.password && touched.password}
             errorMessage={errors.password}
-            {...getFieldProps("password")}
+            {...getFieldProps('password')}
           />
         </div>
         <div className="mt-5 mb-2">
@@ -56,7 +56,7 @@ export function Signup(props) {
         </div>
         <div className="text-sm">
           <span className="text-gray-600">Hesabınız var mı?</span>
-          <Link href="/?login=true"> Giriş yapın</Link>
+          <Link href="/login"> Giriş yapın</Link>
         </div>
       </form>
     </Modal>
