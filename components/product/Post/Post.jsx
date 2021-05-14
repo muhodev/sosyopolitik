@@ -7,7 +7,7 @@ export function Post({ data }) {
       <div className="flex justify-between">
         <div className="">
           <div>
-            <PostTitle title={data.title} />
+            <PostTitle title={data.title} slug={data.slug} />
           </div>
           <div className="text-sm flex mt-3">
             <address className="not-italic">{data.author.displayName}</address>

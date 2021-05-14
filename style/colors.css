@@ -16,6 +16,10 @@
 .dark {
 }
 
+.c-text-hover-link:hover {
+  color: #0060df;
+}
+
 .c-bg-dark {
   background-color: var(--c-bg-dark);
 }

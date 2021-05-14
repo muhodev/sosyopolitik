@@ -8,6 +8,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--c-bg-primary);
   color: var(--c-text-primary);
+  font-size: 15px;
 }
 
 svg path:last-child {
