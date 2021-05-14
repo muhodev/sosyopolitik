@@ -1,3 +1,6 @@
+import { useMutation } from 'react-query';
+import axios from 'axios';
+
 import {
   Logo,
   FormikForm,
@@ -6,9 +9,21 @@ import {
   FormikButton,
   Link
 } from 'components';
+import { API_URL } from 'consts';
 import { signupSchema } from 'formSchemas';
+import { useAuth } from 'providers';
+
+const signup = payload =>
+  axios.post(`${API_URL}/auth/signup`, payload).then(res => res.data);
 
 export default function Signup(props) {
+  const mutation = useMutation(payload => signup(payload));
+
+  const { state, setAuth } = useAuth();
+  if (state.isLoggedIn) {
+    return null;
+  }
+
   return (
     <div className="w-full h-full flex justify-center ">
       <div className="c-bg-secondary border px-4 py-5 w-full md:w-4/12 mt-6">
@@ -17,8 +32,25 @@ export default function Signup(props) {
         </div>
         <div>
           <FormikForm
-            initialValues={{ email: '', password: '' }}
+            initialValues={{
+              displayName: '',
+              username: '',
+              email: '',
+              password: ''
+            }}
             schema={signupSchema}
+            onSubmit={(values, actions) => {
+              mutation.mutate(values, {
+                onError: err => console.log(err.message),
+                onSuccess: data => {
+                  setAuth({
+                    token: data.token,
+                    user: data.doc
+                  });
+                  router.push('/');
+                }
+              });
+            }}
           >
             <div className="pb-4">
               <Input label="İsim" name="displayName" placeholder="İsim" />
@@ -40,7 +72,12 @@ export default function Signup(props) {
                 placeholder="Bir şifre belirleyin"
               />
             </div>
-            <FormikButton variant="primary" size="full" type="submit">
+            <FormikButton
+              isLoading={mutation.isLoading}
+              variant="primary"
+              size="full"
+              type="submit"
+            >
               Kaydol
             </FormikButton>
             <div className="text-sm flex justify-center mt-6">

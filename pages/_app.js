@@ -1,7 +1,8 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
-import { AppLayout } from 'components/';
+import { AuthProvider } from 'providers';
+import { AuthConsumer } from 'consumers';
 import 'style/index.css';
 
 export default function MyApp({ Component, pageProps }) {
@@ -20,7 +21,11 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClientRef.current}>
       <Hydrate state={pageProps.dehydratedState}>
-        <Component {...pageProps} />
+        <AuthProvider>
+          <AuthConsumer>
+            <Component {...pageProps} />
+          </AuthConsumer>
+        </AuthProvider>
       </Hydrate>
     </QueryClientProvider>
   );

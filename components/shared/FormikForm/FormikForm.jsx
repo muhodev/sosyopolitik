@@ -1,7 +1,7 @@
 import { Formik, Form } from 'formik';
 
 export function FormikForm(props) {
-  const onSubmit = values => props.onSubmit(values);
+  const onSubmit = (values, actions) => props.onSubmit(values, actions);
   return (
     <Formik
       onSubmit={onSubmit}

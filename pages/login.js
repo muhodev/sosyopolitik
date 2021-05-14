@@ -6,9 +6,15 @@ import {
   FormikButton,
   Link
 } from 'components';
+
+import { useAuth } from 'providers';
 import { loginSchema } from 'formSchemas';
 
 export default function Login(props) {
+  const { state } = useAuth();
+  if (state.isLoggedIn) {
+    return null;
+  }
   return (
     <div className="w-full h-full flex justify-center ">
       <div className="c-bg-secondary border px-4 py-5 w-full md:w-4/12 mt-6">

@@ -8,3 +8,4 @@ export * from './Icon';
 export * from './Input';
 export * from './FormikForm';
 export * from './FormikButton';
+export * from './Spinner';
