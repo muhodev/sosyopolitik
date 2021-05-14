@@ -9,3 +9,4 @@ export * from './Input';
 export * from './FormikForm';
 export * from './FormikButton';
 export * from './Spinner';
+export * from './InlineDialog';

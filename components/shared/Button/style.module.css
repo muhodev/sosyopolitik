@@ -16,6 +16,11 @@
   background-color: var(--c-primary-hover);
 }
 
+.subtle {
+  padding-left: 0 !important ;
+  padding-right: 0 !important;
+}
+
 .secondary {
   @apply text-gray-700 bg-gray-100 hover:bg-gray-200;
 }

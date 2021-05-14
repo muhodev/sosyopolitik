@@ -35,6 +35,19 @@ function authReducer(state, action) {
       }
       return copyState;
     }
+    case 'logout': {
+      if (window?.localStorage) {
+        localStorage.removeItem('auth_token');
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('user');
+        return {
+          isLoggedIn: false,
+          token: null,
+          user: null
+        };
+      }
+      return state;
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -62,6 +75,7 @@ export function useAuth() {
 
   const setAuth = payload => dispatch({ type: 'setAuth', payload });
   const checkAuth = () => dispatch({ type: 'checkAuth' });
+  const logout = () => dispatch({ type: 'logout' });
 
-  return { state, setAuth, checkAuth };
+  return { state, setAuth, checkAuth, logout };
 }

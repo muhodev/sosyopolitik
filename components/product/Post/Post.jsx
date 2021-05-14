@@ -1,4 +1,4 @@
-import { PostTitle } from 'components';
+import { PostTitle, InlineDialog } from 'components';
 import { Like, Comment, MoreVertical, Bookmark } from 'components/icons';
 
 export function Post({ data }) {
@@ -32,8 +32,16 @@ export function Post({ data }) {
             </div>
           </div>
         </div>
-        <div className="text-lg ml-2">
-          <MoreVertical />
+        <div>
+          <InlineDialog
+            trigger={
+              <div className="text-lg ml-2">
+                <MoreVertical />
+              </div>
+            }
+          >
+            <div>Gönderiyi Bildir</div>
+          </InlineDialog>
         </div>
       </div>
     </div>
