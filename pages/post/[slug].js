@@ -3,11 +3,10 @@ import { useRouter } from 'next/router';
 import { QueryClient, useQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 import { Posts, Profiles, Footer } from 'components';
+import { API_URL } from 'consts';
 
 const getPost = postSlug =>
-  axios
-    .get(`http://localhost:3001/api/v1/posts/${postSlug}`)
-    .then(res => res?.data);
+  axios.get(API_URL + `/posts/${postSlug}`).then(res => res?.data);
 
 export default function Slug(props) {
   const { query } = useRouter();
