@@ -20,9 +20,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClientRef.current}>
       <Hydrate state={pageProps.dehydratedState}>
-        <AppLayout>
-          <Component {...pageProps} />
-        </AppLayout>
+        <Component {...pageProps} />
       </Hydrate>
     </QueryClientProvider>
   );

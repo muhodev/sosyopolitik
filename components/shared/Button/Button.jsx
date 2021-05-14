@@ -1,5 +1,5 @@
-import cn from "classnames";
-import style from "./style.module.css";
+import cn from 'classnames';
+import style from './style.module.css';
 
 export function Button({
   onClick,
@@ -7,11 +7,12 @@ export function Button({
   disabled,
   children,
   type,
+  size,
   ...rest
 }) {
   return (
     <button
-      className={cn(style.button, style[variant])}
+      className={cn(style.button, style[variant], style[size])}
       onClick={onClick}
       type={type}
       disabled={disabled}

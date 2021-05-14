@@ -1,41 +1,38 @@
-import cn from "classnames";
-import style from "./style.module.css";
-
+import { useField } from 'formik';
+import cn from 'classnames';
+import style from './style.module.css';
 export function Input({
-  type,
-  onClick,
-  placeholder,
   autoFocus,
   label,
-  hasError,
-  errorMessage,
+  name,
+  type = 'text',
+  placeholder,
   ...rest
 }) {
+  const [field, meta] = useField({ name, type });
   return (
-    <>
-      <div
-        className={cn(style.inputContainer, {
-          [style.error]: hasError,
-        })}
-      >
-        {label && (
-          <label
-            className={cn(style.label, { [style.top]: rest.value.length > 0 })}
-          >
-            {label}
-          </label>
-        )}
-        <input
-          type={type}
-          className={cn(style.input)}
-          onClick={onClick}
-          autoFocus={autoFocus}
-          {...rest}
-        />
-      </div>
-      {errorMessage && hasError && (
-        <div className={cn(style.errorMessage)}>{errorMessage}</div>
+    <div
+      className={cn({ [style.error]: meta.error && meta.touched }, 'w-full')}
+    >
+      {label && (
+        <label className="text-sm font-medium c-text-secondary pb-1 flex">
+          {label}
+        </label>
       )}
-    </>
+      <input
+        autoFocus={autoFocus}
+        name={field.name}
+        type={type}
+        value={field.value}
+        onChange={field.onChange}
+        onBlur={field.onBlur}
+        placeholder={placeholder}
+        className={cn(style.input, 'border w-full py-2 px-4 rounded-md')}
+        {...rest}
+      />
+      {meta.error && meta.touched && (
+        <div className="errorMessage text-sm pt-1">{meta.error}</div>
+      )}
+    </div>
   );
 }

@@ -4,6 +4,7 @@ import { QueryClient, useQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 import { Posts, Profiles, Footer } from 'components';
 import { API_URL } from 'consts';
+import { AppLayout } from 'components';
 
 const getPost = postSlug =>
   axios.get(API_URL + `/posts/${postSlug}`).then(res => res?.data);
@@ -14,7 +15,7 @@ export default function Slug(props) {
     getPost(context.queryKey[1])
   );
   return (
-    <>
+    <AppLayout>
       <div className="w-full flex justify-center">
         <div className="w-9/12 my-5">
           <div className="grid grid-cols-3 gap-8">
@@ -37,7 +38,7 @@ export default function Slug(props) {
           </div>
         </div>
       </div>
-    </>
+    </AppLayout>
   );
 }
 

@@ -1,37 +1,16 @@
-.inputContainer {
-  @apply relative flex items-center;
-  height: 50px;
-}
-
-.input {
-  @apply flex w-full h-full border border-gray-300 rounded-xl
-  px-4 py-4 top-0 left-0 right-0 bottom-0 focus:outline-none bg-gray-50;
-}
-
-.input:focus {
-  box-shadow: 0 0 0 2px rgb(0 132 255 / 50%);
-}
-
-.label {
-  @apply flex text-gray-500 absolute pl-4 text-base pointer-events-none;
-}
-
-.top {
-  @apply top-1 text-xs;
-}
-
-.top + .input {
-  @apply pb-0;
-}
-
-.error label {
-  @apply text-red-500;
+.error {
 }
 
 .error input {
-  box-shadow: 0 0 0 2px rgb(255 17 0 / 53%) !important;
+  box-shadow: 0 0 0 2px #ff5858 !important;
 }
 
-.errorMessage {
-  @apply pt-1 text-xs text-red-500;
+.error div,
+.error label {
+  color: #ff5858;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #b7d7f9;
 }
