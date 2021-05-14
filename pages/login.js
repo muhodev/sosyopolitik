@@ -1,3 +1,6 @@
+import { useMutation } from 'react-query';
+import { useRouter } from 'next/router';
+import axios from 'axios';
 import {
   Logo,
   FormikForm,
@@ -6,12 +9,18 @@ import {
   FormikButton,
   Link
 } from 'components';
+import { API_URL } from 'consts';
 
 import { useAuth } from 'providers';
 import { loginSchema } from 'formSchemas';
 
+const login = payload =>
+  axios.post(`${API_URL}/auth/login`, payload).then(res => res.data);
+
 export default function Login(props) {
-  const { state } = useAuth();
+  const router = useRouter();
+  const mutation = useMutation(payload => login(payload));
+  const { state, setAuth } = useAuth();
   if (state.isLoggedIn) {
     return null;
   }
@@ -25,6 +34,18 @@ export default function Login(props) {
           <FormikForm
             initialValues={{ email: '', password: '' }}
             schema={loginSchema}
+            onSubmit={(values, actions) => {
+              mutation.mutate(values, {
+                onError: err => console.log(err.message),
+                onSuccess: data => {
+                  setAuth({
+                    token: data.token,
+                    user: data.doc
+                  });
+                  router.push('/');
+                }
+              });
+            }}
           >
             <div className="pb-4">
               <Input label="Email" name="email" placeholder="Email adresi" />
@@ -42,7 +63,12 @@ export default function Login(props) {
             >
               Şifremi unuttum
             </Link>
-            <FormikButton variant="primary" size="full" type="submit">
+            <FormikButton
+              isLoading={mutation.isLoading}
+              variant="primary"
+              size="full"
+              type="submit"
+            >
               Giriş Yap
             </FormikButton>
             <div className="text-sm flex justify-center mt-6">

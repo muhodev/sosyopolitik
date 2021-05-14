@@ -1,5 +1,6 @@
 import { useMutation } from 'react-query';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 import {
   Logo,
@@ -18,6 +19,8 @@ const signup = payload =>
 
 export default function Signup(props) {
   const mutation = useMutation(payload => signup(payload));
+
+  const router = useRouter();
 
   const { state, setAuth } = useAuth();
   if (state.isLoggedIn) {
