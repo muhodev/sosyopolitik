@@ -9,3 +9,5 @@ export * from './User';
 export * from './FollowButton';
 export * from './Footer';
 export * from './HomeTopFeeds';
+export * from './Comments';
+export * from './Author';

@@ -13,16 +13,42 @@ const like = payload =>
 
 export function Post({ data }) {
   const queryClient = useQueryClient();
-
   const mutation = useMutation(payload => like(payload));
+
   const { state } = useAuth();
+  const { isLoggedIn, user } = state;
 
   const likeAsync = useDebounceCallback(
     payload => mutation.mutate(payload),
     500
   );
 
-  const { isLoggedIn, user } = state;
+  const makeLike = () => {
+    if (!isLoggedIn && !user) {
+      alert('Lütfen giriş yapın');
+      return;
+    }
+    queryClient.setQueryData('posts', oldData => ({
+      ...oldData,
+      docs: oldData.docs.map(doc => {
+        if (doc._id === data._id) {
+          return {
+            ...doc,
+            isLiked: !doc.isLiked,
+            likes: data.isLiked ? doc.likes - 1 : doc.likes + 1
+          };
+        }
+        return doc;
+      })
+    }));
+
+    likeAsync({
+      postId: data._id,
+      userId: user._id,
+      action: data.isLiked ? 'unlike' : 'like'
+    });
+  };
+
   return (
     <div className="c-bg-secondary w-full bg-white rounded-md border py-4 px-5">
       <div className="flex justify-between">
@@ -39,40 +65,26 @@ export function Post({ data }) {
             <p className="mt-3 text-sm c-text-secondary">{data.description}</p>
           )}
 
-          <div className="flex justify-between items-center mt-6 text-xl">
-            <div className="grid gap-7 grid-cols-3  w-auto">
-              <div
-                className={cn('cursor-pointer', { liked: data.isLiked })}
-                onClick={() => {
-                  if (!isLoggedIn && !user) {
-                    alert('Lütfen giriş yapın');
-                    return;
-                  }
-                  queryClient.setQueryData('posts', oldData => ({
-                    ...oldData,
-                    docs: oldData.docs.map(doc => {
-                      if (doc._id === data._id) {
-                        return { ...doc, isLiked: !doc.isLiked };
-                      }
-                      return doc;
-                    })
-                  }));
-
-                  likeAsync({
-                    postId: data._id,
-                    userId: user._id,
-                    action: data.isLiked ? 'unlike' : 'like'
-                  });
-                }}
-              >
-                <Like />
-              </div>
-              <div>
-                <Comment />
-              </div>
-              <div>
-                <Bookmark />
-              </div>
+          <div className="grid gap-7 grid-cols-3 w-auto items-center mt-6 text-xl c-text-secondary">
+            <div
+              className={cn('cursor-pointer flex items-center', {
+                liked: data.isLiked
+              })}
+              onClick={makeLike}
+            >
+              <Like />
+              {data.likes !== 0 && (
+                <span className="text-sm pl-2">{data.likes}</span>
+              )}
+            </div>
+            <div className="cursor-pointer flex items-center">
+              <Comment />
+              {data.counts !== 0 && (
+                <span className="text-sm pl-2">{data.counts}</span>
+              )}
+            </div>
+            <div>
+              <Bookmark />
             </div>
           </div>
         </div>

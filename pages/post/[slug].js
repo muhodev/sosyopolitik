@@ -2,18 +2,26 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { QueryClient, useQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
-import { Posts, Profiles, Footer } from 'components';
+import { Profiles, Footer, Comments } from 'components';
 import { API_URL } from 'consts';
 import { AppLayout } from 'components';
 
 const getPost = postSlug =>
-  axios.get(API_URL + `/posts/${postSlug}`).then(res => res?.data);
+  axios.get(`${API_URL}/posts/${postSlug}`).then(res => res?.data);
+
+const getComments = postId =>
+  axios.get(`${API_URL}/posts/${postId}/comments`).then(res => res?.data);
 
 export default function Slug(props) {
   const { query } = useRouter();
   const { data } = useQuery(['post', query?.slug], context =>
     getPost(context.queryKey[1])
   );
+
+  const { data: comments } = useQuery(['comments', data.doc?._id], context =>
+    getComments(context.queryKey[1])
+  );
+
   return (
     <AppLayout>
       <div className="w-full flex justify-center">
@@ -23,6 +31,7 @@ export default function Slug(props) {
               <div className="c-bg-secondary border rounded-md py-4 px-5">
                 <h1 className="text-xl font-bold mb-5">{data?.doc?.title}</h1>
                 <p className="mt-4">{data?.doc?.content}</p>
+                <Comments data={comments} />
               </div>
             </div>
             <div>

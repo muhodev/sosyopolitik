@@ -10,3 +10,4 @@ export * from './FormikForm';
 export * from './FormikButton';
 export * from './Spinner';
 export * from './InlineDialog';
+export * from './Editor';

@@ -5,7 +5,7 @@ export function Header() {
   const { state, logout } = useAuth();
   const { isLoggedIn, user } = state;
   return (
-    <header className="flex items-center h-14 px-5 shadow-sm c-bg-secondary sticky top-0 left-0">
+    <header className="flex items-center h-14 px-5 shadow-sm c-bg-secondary sticky top-0 left-0 z-50">
       <div className=" w-full flex items-center justify-between ">
         <div className="flex items-center">
           <Logo />
