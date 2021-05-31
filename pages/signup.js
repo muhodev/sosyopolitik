@@ -57,13 +57,6 @@ export default function Signup(props) {
           >
             <div className="pb-4">
               <Input label="İsim" name="displayName" placeholder="İsim" />
-            </div>{' '}
-            <div className="pb-4">
-              <Input
-                label="Kullanıcı adı"
-                name="username"
-                placeholder="Kullanıcı adınızı oluşturun"
-              />
             </div>
             <div className="pb-4">
               <Input label="Email" name="email" placeholder="Email adresi" />

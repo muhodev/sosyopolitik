@@ -25,24 +25,12 @@ export default function Slug(props) {
   return (
     <AppLayout>
       <div className="w-full flex justify-center">
-        <div className="w-9/12 my-5">
-          <div className="grid grid-cols-3 gap-8">
-            <div className="col-span-2">
-              <div className="c-bg-secondary">
-                <h1 className="text-xl font-bold mb-5">{data?.doc?.title}</h1>
-                <p className="mt-4">{data?.doc?.content}</p>
-                <Comments data={comments} />
-              </div>
-            </div>
-            <div>
-              <div className="grid gap-3">
-                <div>
-                  <Profiles data={[]} />
-                </div>
-                <div>
-                  <Footer />
-                </div>
-              </div>
+        <div className="w-full s-container my-5">
+          <div className="col-span-2">
+            <div className="c-bg-secondary">
+              <h1 className="text-xl font-bold mb-5">{data?.doc?.title}</h1>
+              <p className="mt-4">{data?.doc?.content}</p>
+              <Comments data={comments} />
             </div>
           </div>
         </div>
