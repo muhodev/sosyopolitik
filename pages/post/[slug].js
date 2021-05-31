@@ -28,7 +28,7 @@ export default function Slug(props) {
         <div className="w-9/12 my-5">
           <div className="grid grid-cols-3 gap-8">
             <div className="col-span-2">
-              <div className="c-bg-secondary border rounded-md py-4 px-5">
+              <div className="c-bg-secondary">
                 <h1 className="text-xl font-bold mb-5">{data?.doc?.title}</h1>
                 <p className="mt-4">{data?.doc?.content}</p>
                 <Comments data={comments} />

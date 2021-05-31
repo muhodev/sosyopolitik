@@ -1,9 +1,8 @@
 import { useMutation, useQueryClient } from 'react-query';
 import axios from 'axios';
-import cn from 'classnames';
 
 import { PostTitle, InlineDialog } from 'components';
-import { Like, Comment, MoreVertical, Bookmark } from 'components/icons';
+import { MoreVertical } from 'components/icons';
 import { useAuth } from 'providers';
 import { API_URL } from 'consts';
 import { useDebounceCallback } from 'hooks';
@@ -50,55 +49,22 @@ export function Post({ data }) {
   };
 
   return (
-    <div className="c-bg-secondary w-full bg-white rounded-md border py-4 px-5">
-      <div className="flex justify-between">
-        <div className="">
-          <div>
-            <PostTitle title={data.title} slug={data.slug} />
-          </div>
-          <div className="text-sm flex mt-3">
-            <address className="not-italic">{data.author.displayName}</address>
-            <time className="ml-2">{data.date}</time>
-          </div>
-
-          {data.description && (
-            <p className="mt-3 text-sm c-text-secondary">{data.description}</p>
-          )}
-
-          <div className="grid gap-7 grid-cols-3 w-auto items-center mt-6 text-xl c-text-secondary">
-            <div
-              className={cn('cursor-pointer flex items-center', {
-                liked: data.isLiked
-              })}
-              onClick={makeLike}
-            >
-              <Like />
-              {data.likes !== 0 && (
-                <span className="text-sm pl-2">{data.likes}</span>
-              )}
-            </div>
-            <div className="cursor-pointer flex items-center">
-              <Comment />
-              {data.counts !== 0 && (
-                <span className="text-sm pl-2">{data.counts}</span>
-              )}
-            </div>
-            <div>
-              <Bookmark />
-            </div>
-          </div>
+    <div className="c-bg-secondary w-full">
+      <div
+        className="w-full bg-top h-56 md:h-40 bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(${data.cover})` }}
+      >
+        <img className="hidden" src={data.cover} alt="" />
+      </div>
+      <div className="pt-2">
+        <div
+          className={`c-bg-${data.category?.color} c-text-white rounded inline-flex text-xs px-2 py-1`}
+        >
+          {data.category.title}
         </div>
-        <div>
-          <InlineDialog
-            trigger={
-              <div className="text-lg ml-2">
-                <MoreVertical />
-              </div>
-            }
-          >
-            <div>Gönderiyi Bildir</div>
-          </InlineDialog>
-        </div>
+      </div>
+      <div className="pt-4">
+        <PostTitle title={data.title} slug={data.slug} />
       </div>
     </div>
   );

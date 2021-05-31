@@ -1,10 +1,10 @@
 :root {
-  --c-primary: #2563eb;
-  --c-primary-hover: #044ce7;
+  --c-primary: #4825c9;
+  --c-primary-hover: #3918af;
   --c-secondary: #fc595e;
   --c-text-white: #fff;
-  --c-text-primary: #111827;
-  --c-text-secondary: #58667e;
+  --c-text-primary: #000;
+  --c-text-secondary: #292f38;
   --c-text-tertiary: #58667e;
 
   --c-bg-primary: #f9fafb;
@@ -18,7 +18,15 @@
 }
 
 .c-text-hover-link:hover {
-  color: #0060df;
+  color: #3918af;
+}
+
+.c-bg-black {
+  background-color: #000;
+}
+
+.c-text-white {
+  color: #fff;
 }
 
 .c-bg-dark {

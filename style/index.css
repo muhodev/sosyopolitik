@@ -7,7 +7,6 @@
 body {
   font-family: 'Inter', sans-serif;
   color: var(--c-text-primary);
-  font-size: 15px;
 }
 
 svg path:last-child {
@@ -16,4 +15,19 @@ svg path:last-child {
 .liked svg {
   fill: rgb(224, 36, 94);
   color: rgb(224, 36, 94);
+}
+
+.description-truncate {
+  line-height: 1.5rem;
+  max-height: 6rem;
+  overflow: hidden !important;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+}
+
+.s-container {
+  max-width: 1032px;
 }
