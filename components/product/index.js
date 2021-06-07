@@ -11,3 +11,4 @@ export * from './Footer';
 export * from './HomeTopFeeds';
 export * from './Comments';
 export * from './Author';
+export * from './Pagination';

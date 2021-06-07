@@ -2,10 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import './colors.css';
 @import './spinner.css';
-
 @import './nprogress.css';
+@import './pagination.css';
 
 body {
   font-family: 'Inter', sans-serif;
