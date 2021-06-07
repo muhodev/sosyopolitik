@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Editor, EditorState } from 'draft-js';
 import 'draft-js/dist/Draft.css';
-import { Button } from 'components';
+import { Button, Avatar } from 'components';
 
 import { extractText } from 'components/shared/Editor';
 
@@ -19,7 +19,7 @@ function CommentEditor(props) {
   return (
     <>
       <div className="grid gap-4" style={{ gridTemplateColumns: 'auto 1fr' }}>
-        <div>author</div>
+        <Avatar />
         <div className="w-full" onClick={openEditor}>
           <Editor
             customStyleMap={{ width: '100%' }}

@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { QueryClient, useQuery, useQueryClient } from 'react-query';
-import { dehydrate } from 'react-query/hydration';
-import { Posts, Profiles, Footer, AppLayout } from 'components';
+import { useQuery } from 'react-query';
+import { Posts, AppLayout } from 'components';
 import { API_URL } from 'consts';
 
 const getPosts = () => axios.post(API_URL + '/feed').then(res => res?.data);

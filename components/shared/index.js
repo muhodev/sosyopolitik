@@ -11,3 +11,4 @@ export * from './FormikButton';
 export * from './Spinner';
 export * from './InlineDialog';
 export * from './Editor';
+export * from './Image';
