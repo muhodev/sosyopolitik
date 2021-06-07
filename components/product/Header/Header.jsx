@@ -1,4 +1,5 @@
-import { Logo } from 'components';
+import { Logo, Link } from 'components';
+import items from './items.json';
 
 export function Header() {
   return (
@@ -6,6 +7,13 @@ export function Header() {
       <div className=" w-full flex items-center justify-between ">
         <div className="flex items-center">
           <Logo />
+          <div className="hidden md:flex items-center mx-4">
+            {items.map((item, index) => (
+              <Link href={item.link} key={index}>
+                <span className="px-2">{item.title}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </header>

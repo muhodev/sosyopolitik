@@ -7,7 +7,7 @@ export function Pagination(props) {
       nextLabel={'Sonraki'}
       breakLabel={'...'}
       breakClassName={'break-me'}
-      pageCount={10}
+      pageCount={100}
       marginPagesDisplayed={2}
       pageRangeDisplayed={2}
       containerClassName={'pagination'}

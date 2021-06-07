@@ -1,15 +1,18 @@
 import axios from 'axios';
-import { useQuery } from 'react-query';
+import { QueryClient, useQuery } from 'react-query';
+import { dehydrate } from 'react-query/hydration';
 import { Posts, AppLayout } from 'components';
 import { API_URL } from 'consts';
 import { useRouter } from 'next/router';
 
-const getPosts = () => axios.post(API_URL + '/feed').then(res => res?.data);
+const getPosts = page =>
+  axios.post(API_URL + '/feed', { page }).then(res => res?.data);
 
 export default function Home(props) {
-  const { data } = useQuery('posts', getPosts);
-
   const router = useRouter();
+  const { data } = useQuery(['posts', router.query.page || 1], context =>
+    getPosts(context.queryKey[1])
+  );
 
   const onPageChangeHandler = index => {
     if (index.selected === 0) {
@@ -35,9 +38,15 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps({ query }) {
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery(['posts', query.page || 1], context =>
+    getPosts(context.queryKey[1])
+  );
   return {
     props: {
-      page: query.page || 1
+      page: query.page || 1,
+      dehydratedState: dehydrate(queryClient)
     }
   };
 }

@@ -1,0 +1,8 @@
+[
+  { "title": "Gündem", "link": "/c/gundem" },
+  { "title": "Ekonomi", "link": "c/ekonomi" },
+  { "title": "Eğitim", "link": "c/Eğitim" },
+  { "title": "Teknoloji", "link": "/c/teknoloji" },
+  { "title": "Girişim", "link": "/c/girisim" },
+  { "title": "Uzay", "link": "c/uzay" }
+]
