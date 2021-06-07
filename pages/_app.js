@@ -3,10 +3,9 @@ import Router from 'next/router';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
 import NProgress from 'nprogress'; //nprogress module
-
-import 'nprogress/nprogress.css'; //styles of nprogress
 import 'style/index.css';
 
+NProgress.setC;
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
