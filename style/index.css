@@ -7,6 +7,7 @@
 @import './spinner.css';
 @import './nprogress.css';
 @import './pagination.css';
+@import './hamburgerMenu.css';
 
 body {
   font-family: 'Inter', sans-serif;
