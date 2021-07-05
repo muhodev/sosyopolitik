@@ -1,9 +1,0 @@
-.content {
-  @apply absolute right-4 mt-1 py-3;
-  background: rgb(255, 255, 255);
-  border-radius: 3px;
-  box-shadow: rgb(9 30 66 / 25%) 0px 4px 8px -2px,
-    rgb(9 30 66 / 31%) 0px 0px 1px;
-  box-sizing: border-box;
-  min-width: 200px;
-}
