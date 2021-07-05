@@ -1,3 +1,10 @@
+import { Header } from "components";
+
 export function AppLayout(props) {
-  return <div></div>;
+  return (
+    <div>
+      <Header />
+      {props.children}
+    </div>
+  );
 }

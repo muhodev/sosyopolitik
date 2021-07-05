@@ -1,7 +1,11 @@
+import { Logo } from "components";
+
 export function Header(props) {
   return (
     <header>
-      <div></div>
+      <div>
+        <Logo />
+      </div>
     </header>
   );
 }
