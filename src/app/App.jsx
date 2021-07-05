@@ -1,5 +1,5 @@
-import { AuthenticatedApp } from "./AuthenticatedApp";
+import { UnauthenticatedApp } from "./UnauthenticatedApp";
 
 export function App(props) {
-  return <AuthenticatedApp />;
+  return <UnauthenticatedApp />;
 }

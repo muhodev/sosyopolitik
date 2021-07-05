@@ -1,3 +1,9 @@
+import { AppLayout, SignupModal } from "components";
+
 export function UnauthenticatedApp(props) {
-  return <div></div>;
+  return (
+    <AppLayout>
+      <SignupModal />
+    </AppLayout>
+  );
 }

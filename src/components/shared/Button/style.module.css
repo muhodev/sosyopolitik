@@ -11,3 +11,7 @@
 
 .big {
 }
+
+.full {
+  @apply w-full;
+}
